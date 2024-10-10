@@ -223,6 +223,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 350025559}
     m_Modifications:
+    - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
+      propertyPath: m_text
+      value: Yeah! Kids SHOULD!
+      objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
       value: ButtonChoice1b
@@ -733,23 +737,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 6868968341113618656, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 6868968341113618656, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6906610317373279883, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_Pivot.x
@@ -839,6 +843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PAUSE_MENU
       objectReference: {fileID: 0}
+    - target: {fileID: 7548207708458608490, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8953434401178380070, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -871,6 +879,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 350025559}
     m_Modifications:
+    - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
+      propertyPath: m_text
+      value: Unpack and Wait for neighbors
+      objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
       value: ButtonSceneChange1
@@ -1063,6 +1075,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 350025559}
     m_Modifications:
+    - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
+      propertyPath: m_text
+      value: Go out and meet some neighbors
+      objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
       value: ButtonSceneChange2
@@ -1202,7 +1218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: '"NO!"'
+      value: Kids should play on streets...?
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
