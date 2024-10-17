@@ -186,14 +186,14 @@ public class Scene2bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
-            Char2speech.text = "Let's go to the plnning committee!";
+            Char2speech.text = "So, you're down to help me out, right?";
            
         }
         else if (primeInt == 22)
         {
 
             Char1name.text = "YOU";
-            Char1speech.text = "Um... the what?";
+            Char1speech.text = "Um... what?";
             Char2name.text = "";
             Char2speech.text = "";
            // Turn off the "Next" button, turn on "Scene" button/s
