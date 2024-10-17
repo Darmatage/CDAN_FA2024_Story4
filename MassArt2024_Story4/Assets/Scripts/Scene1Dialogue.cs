@@ -32,6 +32,10 @@ public class Scene1Dialogue : MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
+    public string playerName;
+    public GameHandler gameHandler;
+    public GameObject inputField;
+    public GameObject NameEnterButton;
     //public AudioSource audioSource1;
     private bool allowSpace = true;
 
@@ -51,6 +55,10 @@ public class Scene1Dialogue : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+        NameEnterButton.SetActive(false);
+        inputField.SetActive(false);
+    string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp.ToUpper();
     }
 
     // Use the spacebar as a faster "Next" button:
@@ -91,7 +99,7 @@ public class Scene1Dialogue : MonoBehaviour
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
-        {	//DialogueDisplay.SetActive(false);
+        {	
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -99,7 +107,6 @@ public class Scene1Dialogue : MonoBehaviour
         }
         else if (primeInt == 5)
         {
-			//DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "Oh damn, somebody's at the door I now own.";
             Char2name.text = "";
@@ -152,20 +159,22 @@ public class Scene1Dialogue : MonoBehaviour
             prop_HOApamphlet.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Ldy";
+            Char2name.text = "HOA Lady";
             Char2speech.text = "It's riveting literature. What's your name? Let me add you to the neighborhood’s online messaging board.";
         }
         else if (primeInt == 11)
         {
-			
-            Char1name.text = "YOU";
+            NameEnterButton.SetActive(true);
+            inputField.SetActive(true);
+            Char1name.text = playerName;
             Char1speech.text = "I just got here, what is it you do?";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 12)
         {
-			
+            NameEnterButton.SetActive(false);
+            inputField.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -183,7 +192,7 @@ public class Scene1Dialogue : MonoBehaviour
         else if (primeInt == 14)
         {
 			DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Um...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -229,7 +238,7 @@ public class Scene1Dialogue : MonoBehaviour
         {
             ArtChar1b.SetActive(false);
             ArtChar1a.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "...oh... I've been thinking about planting some hydrangeas, I've never had the space for them before.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -245,7 +254,7 @@ public class Scene1Dialogue : MonoBehaviour
         }
 		else if (primeInt == 42)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "But hydrangeas are my favorite flower! And it's my house!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -259,7 +268,7 @@ public class Scene1Dialogue : MonoBehaviour
         }
 		else if (primeInt == 44)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "The neighbors if they're allergic?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -284,7 +293,7 @@ public class Scene1Dialogue : MonoBehaviour
 
 		else if (primeInt == 47)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Surely the neighbors can’t be all bad…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -292,7 +301,7 @@ public class Scene1Dialogue : MonoBehaviour
 
 		else if (primeInt == 48)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "So what now? Do I unpack and wait for neighbors to say hi, or go out and meet them?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -301,7 +310,7 @@ public class Scene1Dialogue : MonoBehaviour
        else if (primeInt == 49)
         {
             DialogueDisplay.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
@@ -319,7 +328,7 @@ public class Scene1Dialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "You WANT kids to run into the street...?!?";
         Char2name.text = "";
         Char2speech.text = "";
@@ -331,7 +340,7 @@ public class Scene1Dialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
         Char2name.text = "";
         Char2speech.text = "";
