@@ -96,9 +96,11 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 5)
         {
-            ArtBg1.SetActive(true);
-            ArtBg2.SetActive(false);
-            ArtChar1a.SetActive(true);
+        ArtBg1.SetActive(true);
+        ArtBg2.SetActive(false);
+        ArtChar1a.SetActive(true);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -113,6 +115,9 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 7)
         {
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -127,6 +132,9 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 9)
         {
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(true);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -158,7 +166,9 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 13)
         {
-            
+        ArtChar1a.SetActive(true);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -175,6 +185,9 @@ public class Scene2bDialogue : MonoBehaviour
 //After choice 1a
         else if (primeInt == 20)
         {
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(true);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -183,6 +196,9 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 21)
         {
+        ArtChar1a.SetActive(true);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -205,8 +221,10 @@ public class Scene2bDialogue : MonoBehaviour
     //after choice 1b
         else if (primeInt == 30)
         {
-            ArtChar1b.SetActive(false);
-            ArtChar1c.SetActive(true);
+
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
@@ -215,7 +233,9 @@ public class Scene2bDialogue : MonoBehaviour
 
         else if (primeInt == 31)
         {
-
+        ArtChar1a.SetActive(true);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Splatthew";
