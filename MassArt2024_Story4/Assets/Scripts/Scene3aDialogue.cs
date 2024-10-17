@@ -117,7 +117,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "<i>playerName</i>";
+            Char2speech.text = "<i>HELLO!</i>";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -125,7 +125,7 @@ public class Scene3aDialogue : MonoBehaviour
         {
           
             Char1name.text = "YOU";
-            Char1speech.text = "Hi! I’m just bringing your plate back.\r\n";
+            Char1speech.text = "Hi! I’m just bringing your plate back.";
             Char2name.text = "";
             Char2speech.text = " ";
             Char3name.text = "";
@@ -136,16 +136,16 @@ public class Scene3aDialogue : MonoBehaviour
           
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "Aw, you didn’t have to do that, I have plenty of plates.\r\n";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 8)
         {
             
-            Char1name.text = "";
-            Char1speech.text = "";
+            Char1name.text = "YOU";
+            Char1speech.text = "No, I really did, my house is a mess and it would’ve been lost forever otherwise.";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -156,8 +156,8 @@ public class Scene3aDialogue : MonoBehaviour
           
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "Whatever helps you sleep at night";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -167,7 +167,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "";
+            Char2speech.text = "<i>5H3RYL takes the plate from you</i>";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -176,8 +176,8 @@ public class Scene3aDialogue : MonoBehaviour
 
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "What did you think of your first day?";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -190,23 +190,124 @@ public class Scene3aDialogue : MonoBehaviour
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
+            // Turn off the "Next" button, turn on "Choice" buttons
+            nextButton.SetActive(false);
+            allowSpace = false;
+            Choice1a.SetActive(true); // function Choice1aFunct()
+            Choice1b.SetActive(true); // function Choice1bFunct()
+            Choice1c.SetActive(true);
         }
-        else if (primeInt == 13)
-        {
 
-            Char1name.text = "";
-            Char1speech.text = "";
+        // after choice 1a
+        else if (primeInt == 15)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "I had a really fun time! I’m really enjoying having moved here so far.\r\n";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
         }
-
-        else if (primeInt == 14)
+        else if (primeInt == 16)
         {
-            DialogueDisplay.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "I’m glad! I’ve been living here for eight years so far and have yet to regret it even if the HOA lady makes me come close.\r\n";
+            Char3name.text = "";
+            Char3speech.text = "";
+            primeInt = 30;
+        }
+
+        // after choice 1b
+        else if (primeInt == 20)
+        {
+            
             Char1name.text = "YOU";
-            Char1speech.text = "Um...";
+            Char1speech.text = "It was okay, it’s hard to judge after just one day.\r\n";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+      
+        }
+        else if (primeInt == 21)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "That makes sense I suppose. I’m sure you’ll warm up to it!\r\n";
+            Char3name.text = "";
+            Char3speech.text = "";
+            primeInt = 30;
+        }
+
+        // after choice 1c
+        else if (primeInt == 25)
+        {
+
+            Char1name.text = "YOU";
+            Char1speech.text = "It sucked and was awful, it’s a wonder anybody stays.\r\n";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+         
+        }
+        else if (primeInt == 26)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "That feels harsh… I’m sure you’ll feel differently once you’re all settled in.";
+            Char3name.text = "";
+            Char3speech.text = "";
+            primeInt = 30;
+        }
+
+        //conversation continues from both story choices:
+        else if (primeInt == 30)
+        {
+         
+            Char1name.text = "YOU";
+            Char1speech.text = "Of course, it’s only been one day. I’ll probably feel differently once it no longer takes me twenty minutes and several boxes to find anything.";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 31)
+        {
+            
+            Char1name.text = "YOU";
+            Char1speech.text = "It took me an unspeakable amount of time to get dressed this morning.\r\n";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 32)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "Haha, I feel you. The family and I went off planet for a few days last summer and we still have to fish things out of the suitcase every now and then.\r\n";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 33)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "<i><b> a large thump can be heard coming from the roof</i></b>";
+        }
+        else if (primeInt == 34)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -217,134 +318,161 @@ public class Scene3aDialogue : MonoBehaviour
             Choice1a.SetActive(true); // function Choice1aFunct()
             Choice1b.SetActive(true); // function Choice1bFunct()
         }
-
-        // after choice 1a
-        else if (primeInt == 20)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 21)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-            primeInt = 39;
-        }
-
-        // after choice 1b
-        else if (primeInt == 30)
+        else if (primeInt == 35)
         {
             
             Char1name.text = "";
             Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "I’m slightly concerned by the scale of your response.\r\n";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+
+        else if (primeInt == 36)
+        {
+            
+            Char1name.text = "YOU";
+            Char1speech.text = "I’ve lived a colorful life, you don’t know where I’ve been.\r\n";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
-            primeInt = 39;
         }
 
-        //conversation continues from both story choices:
-        else if (primeInt == 40)
+        else if (primeInt == 37)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "Interesting… anyway that’s probably my daughter WHO ISN’T SUPPOSED TO BE ON THE ROOF!\r\n";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+
+        else if (primeInt == 38)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "<i>another loud thump can be heard, it's closer than the one before</i>";
+        }
+
+        else if (primeInt == 39)
         {
          
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "";
+            Char3name.text = "D0TT13";
             Char3speech.text = "";
-        }
-        else if (primeInt == 41)
-        {
-            
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 42)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 43)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 44)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 45)
-        {
-            
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-        else if (primeInt == 46)
-        {
-            
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-        else if (primeInt == 47)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-        else if (primeInt == 48)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-        else if (primeInt == 49)
-        {
          
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+
+        }
+        else if (primeInt == 39)
+        {
+
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -366,34 +494,76 @@ public class Scene3aDialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "You WANT kids to run into the street...?!?";
+        Char1speech.text = "Living the dream!";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
-        primeInt = 19;
+        primeInt = 15;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+        Choice1c.SetActive(false);
         nextButton.SetActive(true);
         allowSpace = true;
     }
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
+        Char1speech.text = "I am standing in the middle of the road.";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
-        primeInt = 29;
+        primeInt = 20;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
+        Choice1c.SetActive(false);
         nextButton.SetActive(true);
         allowSpace = true;
     }
-
-
-
+    public void Choice1cFunct()
+    {
+        Char1name.text = "YOU";
+        Char1speech.text = "I regret everything that's lead up to this point.";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        primeInt = 25;
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        Choice1c.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+    public void Choice2aFunct()
+    {
+        Char1name.text = "YOU";
+        Char1speech.text = "Aaaaaah, the sky is falling!\r\n";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        primeInt = 35 ;
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+    public void Choice2bFunct()
+    {
+        Char1name.text = "YOU";
+        Char1speech.text = " … okay then\r\n";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        primeInt = 35 ;
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
 
     public void SceneChange1()
     {
