@@ -30,7 +30,7 @@ public class Scene2bDialogue : MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    //public AudioSource audioSource1;
+    public AudioSource SFX_Knock;
     private bool allowSpace = true;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
@@ -79,7 +79,8 @@ public class Scene2bDialogue : MonoBehaviour
             Char2speech.text = "";
         }
         else if (primeInt == 3)
-        {
+        { 
+			SFX_Knock.Play();
             Char1name.text = "YOU";
             Char1speech.text = "<i><b> knock knock </i></b>";
             Char2name.text = "";
