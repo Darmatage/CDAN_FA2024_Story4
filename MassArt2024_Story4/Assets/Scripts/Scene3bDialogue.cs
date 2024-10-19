@@ -24,7 +24,7 @@ public class Scene3bDialogue : MonoBehaviour
        //public GameObject ArtChar1b;
     //public GameObject ArtChar2;
     public GameObject ArtBg1;//bg_your_house_interior_doorclosed
-    public GameObject ArtBg2;//bg_your_house_interior_dooropen
+    //public GameObject ArtBg2;//bg_your_house_interior_dooropen
     public GameObject Choice1a;
     public GameObject Choice1b;
     public GameObject NextScene1Button;
@@ -41,7 +41,7 @@ public class Scene3bDialogue : MonoBehaviour
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
         ArtBg1.SetActive(true);
-        ArtBg2.SetActive(false);
+        //ArtBg2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -71,35 +71,91 @@ public class Scene3bDialogue : MonoBehaviour
         }
         else if (primeInt == 2)
         {
-            
             DialogueDisplay.SetActive(true);
-            Char1name.text = "Splatthew";
-            Char1speech.text = "So, I know I already told you about The Great Slungus Going-Away party… but I’ve gotta ask you a huuuuuuge favor. That head HOA lady, let’s just say she’s not too big on fighting for your right to party. ";
+            Char1name.text = "YOU";
+            Char1speech.text = "Hey, nice living room";
             Char2name.text = "";
             Char2speech.text = "";
         }
+
         else if (primeInt == 3)
         {
-            Char1name.text = "Splatthew";
-            Char1speech.text = "Apparently we got the cops called on us one too many times for “disturbing the peace.” …Whatever that means.";
-            Char2name.text = "";
-            Char2speech.text = "";
-            //gameHandler.AddPlayerStat(1);
+            ArtChar1a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "Never mind the living room! We have an emergency!";
         }
+
         else if (primeInt == 4)
-        {	//DialogueDisplay.SetActive(false);
-            Char1name.text = "Splatthew";
-            Char1speech.text = "And if she hears one more noise complaint she’s gonna foreclose on the house!";
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "Wait, what? I thought we were planning your friend's party?";
             Char2name.text = "";
             Char2speech.text = "";
         }
-      
 
         else if (primeInt == 5)
         {
+            ArtChar1a.SetActive(false);
+            ArtChar1b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "So, I know I already told you about <b>The Great Slungus Going-Away Blowout Bash</b>...";
+        }
+
+         else if (primeInt == 6)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "...but I've gotta ask you a <b>huuuuuuge</b> favor. That head HOA lady, let's just say she's not too big on fighting for your right to party.";
+        }
+
+        else if (primeInt == 7)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "Apparently we got the cops called on us one too many times for 'disturbing the peace.' ...Whatever that means.";
+            //gameHandler.AddPlayerStat(1);
+        }
+        else if (primeInt == 8)
+        {	
+            ArtChar1b.SetActive(false);
+            ArtChar1c.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "And if she hears one more noise complaint she's gonna foreclose on the house!";
+            
+        }
+        else if (primeInt == 9)
+        {	
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "But man, I can't cancel The Great Slungus Going-Away Blowout Bash!";
+            
+        }
+      
+
+        else if (primeInt == 10)
+        {
 			DialogueDisplay.SetActive(true);
-            Char1name.text = "Splatthew";
-            Char1speech.text = "But man, I can’t cancel The Great Slungus Going-Away Party! I might never see my man again! Do you know how expensive flights to Epsilon Tauri are right now?";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "I might never see my man again! Do you know how expensive flights to Epsilon Tauri are right now?";
+            
+        }
+
+         else if (primeInt == 11)
+        {
+			DialogueDisplay.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "(Yeesh... What is he expecting from me?)";
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off the "Next" button, turn on "Choice" buttons
@@ -113,10 +169,12 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 20)
         {
             //gameHandler.AddPlayerStat(1);
-            Char1name.text = "Splatthew";
-            Char1speech.text = "I thought you’d never ask!";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "I thought you'd never ask!";
+            primeInt=39;
+            
         }
        
 
@@ -124,11 +182,12 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 30)
         {
             ArtChar1a.SetActive(false);
-            ArtChar1b.SetActive(true);
-            Char1name.text = "Splatthew";
-            Char1speech.text = "I know, I know, it’s a lot to take in.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            ArtChar1b.SetActive(false);
+            ArtChar1c.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "I know, I know, it's a lot to take in.";
 			primeInt = 39;
         }
  
@@ -136,20 +195,42 @@ public class Scene3bDialogue : MonoBehaviour
 		else if (primeInt == 40)
         {
             ArtChar1b.SetActive(false);
+            ArtChar1c.SetActive(false);
             ArtChar1a.SetActive(true);
-            Char1name.text = "Splatthew";
-            Char1speech.text = " Well, you see, you’ve got a squeaky clean reputation with the head HOA lady. You’ve gotta find some way to… I don’t know… get rid of her! Just for the night. So, what do you say?";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = " Well, you see, you've got a squeaky clean reputation with the head HOA lady.";
+            
+        }
+
+        	else if (primeInt == 41)
+        {
+            ArtChar1a.SetActive(false);
+            ArtChar1b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "You've gotta find some way to... I don't know... get rid of her! Just for the night. So, what do you say?";
+            
         }
 		
-       else if (primeInt == 41)
+       else if (primeInt == 42)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "Uh...";
+            Char2name.text = "";
+            Char2speech.text = "";
+            
+        }
+
+        else if (primeInt == 43)
         {
             DialogueDisplay.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "YOU";
-            Char2speech.text = "Uh...";
+            Char2name.text = "";
+            Char2speech.text = "";
             // Turn off the "Next" button, turn on "Scene" button/s
             nextButton.SetActive(false);
             allowSpace = false;
@@ -164,11 +245,11 @@ public class Scene3bDialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "YOU";
-        Char2speech.text = "Alright, I’m hearing you out, but where do I come into this plan?";
-        primeInt = 6;
+        Char1name.text = "YOU";
+        Char1speech.text = "Alright, I'm hearing you out, but where do I come into this plan?";
+        Char2name.text = "";
+        Char2speech.text = "";
+        primeInt = 19;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         nextButton.SetActive(true);
@@ -176,10 +257,10 @@ public class Scene3bDialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "YOU";
-        Char2speech.text = "…whuh? Huh whuh??";
+        Char1name.text = "YOU";
+        Char1speech.text = "...whuh? Huh whuh??";
+        Char2name.text = "";
+        Char2speech.text = "";
         primeInt = 29;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -192,10 +273,10 @@ public class Scene3bDialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene2a");
+        SceneManager.LoadScene("Scene4b");
     }
     public void SceneChange2()
     {
-        SceneManager.LoadScene("Scene2b");
+        SceneManager.LoadScene("Scene3a");
     }
 }
