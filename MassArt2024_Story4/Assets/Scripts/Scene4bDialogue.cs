@@ -78,72 +78,71 @@ public class Scene4bDialogue : MonoBehaviour
             
             DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Wow, despite the current state of the economy, I'm a homeowner!";
+            Char1speech.text = "Uh, hey, haha, how are you doing?";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "Can't wait to make wonderful new memories in my house by myself without several roommates.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA lady";
+            Char2speech.text = "What is it?";
+            Char3name.text = "";
+            Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
         {	//DialogueDisplay.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
+            Char1name.text = "YOU";
+            Char1speech.text = "I've got an emergency and I need you and only you to help me out as soon as possible!";
             Char2name.text = "";
-            Char2speech.text = "[<b><i>knock knock</i></b>]";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 5)
         {
 			//DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
-            Char1speech.text = "Oh damn, somebody's at the door I now own.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA lady";
+            Char2speech.text = "...Okay?";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 6)
         {
-            ArtBg1.SetActive(false);
-            ArtBg2.SetActive(true);
-            ArtChar1a.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = " Hello! I'm in charge of the Homeowners' Association, you must have seen our flyers?";
+            Char1name.text = "YOU";
+            Char1speech.text = "So there's this super specific part on my water heater that just broke, and the only place that sells them nearby is Gleebus's Hardware.";
+            Char2name.text = "";
+            Char2speech.text = "";
+            char3name.text = "";
+            char3speech.text = "";
         }
         else if (primeInt == 7)
         {
-            DialogueDisplay.SetActive(false);
-            ArtChar1a.SetActive(false);
-            prop_HOAflyer.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "[<i> HOA lady hands over a flyer </i>]";
+            Char2name.text = "HOA lady";
+            Char2speech.text = "You mean, the Gleebus's Hardware that's a two hour drive away?";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
 		else if (primeInt == 8)
         {
-            DialogueDisplay.SetActive(true);
-            ArtChar1a.SetActive(true);
-            prop_HOAflyer.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Or received one of our pamphlets in the mail?";
+            Char1name.text = "YOU";
+            Char1speech.text = "Yeah, I know, and my car's been giving me trouble.";
+            Char2name.text = "";
+            Char2speech.text = "";
         }
 		else if (primeInt == 9)
         {
-            DialogueDisplay.SetActive(false);
-            ArtChar1a.SetActive(false);
-            prop_HOApamphlet.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "[<i> HOA lady hands over a pamphlet, it's <b>disgustingly</b> thick</i>]";
+            Char2name.text = "HOA lady";
+            Char2speech.text = "Are you sure you need me to do all that?";
         }
 		else if (primeInt == 10)
         {
