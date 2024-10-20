@@ -66,7 +66,7 @@ public class Scene2aDialogue : MonoBehaviour
     //Story Units! The main story function. Players hit [NEXT] to progress to the next primeInt:
     public void Next()
     {
-        primeInt = 1;
+        primeInt += 1;
         if (primeInt == 1)
         {
             // audioSource1.Play();

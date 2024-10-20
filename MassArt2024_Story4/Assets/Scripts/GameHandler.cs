@@ -9,7 +9,7 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int playerStat1;
-
+        public static string playerName = "YOU";
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer mixer;
@@ -80,4 +80,14 @@ public class GameHandler : MonoBehaviour {
                 Application.Quit();
                 #endif
         }
+    public void UpdateName(string newName)
+    {
+        playerName = newName;
+        Debug.Log("name changed to " + playerName);
+    }
+    public string GetName()
+    {
+        return playerName;
+    }
+
 }
