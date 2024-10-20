@@ -26,18 +26,13 @@ public class Scene4bDialogue : MonoBehaviour
     public GameObject ArtChar3b;//Splathew Happy
     public GameObject ArtChar3c;//Splatthew Sad
     
-    //public GameObject prop_HOAflyer;
-    //public GameObject prop_HOApamphlet;
-    //public GameObject ArtChar1b;
-    //public GameObject ArtChar2;
-    public GameObject ArtBg1;//bg_your_house_interior_doorclosed
-    public GameObject ArtBg2;//bg_your_house_interior_dooropen
+    public GameObject ArtBg1;
+    public GameObject ArtBg2;
     public GameObject Choice1a;
     public GameObject Choice1b;
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    //public AudioSource audioSource1;
     private bool allowSpace = true;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
@@ -53,8 +48,8 @@ public class Scene4bDialogue : MonoBehaviour
 
         //prop_HOAflyer.SetActive(false);
         //prop_HOApamphlet.SetActive(false);
-        ArtBg1.SetActive(true);
-        ArtBg2.SetActive(false);
+        ArtBg1.SetActive(false);
+        ArtBg2.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -95,6 +90,9 @@ public class Scene4bDialogue : MonoBehaviour
         }
         else if (primeInt == 3)
         {
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(true);
+        ArtChar2c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA lady";
@@ -105,6 +103,9 @@ public class Scene4bDialogue : MonoBehaviour
         }
         else if (primeInt == 4)
         {	//DialogueDisplay.SetActive(false);
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(false);
+        ArtChar2c.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "I've got an emergency and I need you and only you to help me out as soon as possible!";
             Char2name.text = "";
@@ -157,209 +158,110 @@ public class Scene4bDialogue : MonoBehaviour
             Char2speech.text = "Are you sure you need me to do all that?";
             Char3name.text = "";
             Char3speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            Choice1a.SetActive(true);
+            Choice1b.SetActive(true);
         }
-		else if (primeInt == 10)
+		else if (primeInt == 20)
         {
             DialogueDisplay.SetActive(true);
-            ArtChar2a.SetActive(true);
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(true);
+        ArtChar2c.SetActive(false);
             //prop_HOApamphlet.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Ldy";
-            Char2speech.text = "It's riveting literature. What's your name? Let me add you to the neighborhood’s online messaging board.";
+            Char2name.text = "HOA lady";
+            Char2speech.text = "Okay, okay, I don't need to know. I'll get it right away.";
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 11)
+        else if (primeInt == 30)
         {
 			
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA lady";
+            Char2speech.text = " ...Huh. Okay. I'll get it right away.";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 31)
+        {
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(false);
+        ArtChar2c.SetActive(false);
+        ArtBg1.SetActive(true);
+        ArtBg2.SetActive(false);
+			
             Char1name.text = "YOU";
-            Char1speech.text = "I just got here, what is it you do?";
+            Char1speech.text = "Dude, she's gone! We've got about four hours starting now!";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 12)
+        else if (primeInt == 32)
         {
-			
+        ArtChar3a.SetActive(false);
+        ArtChar3b.SetActive(true);
+        ArtChar3c.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "The HOA makes sure the neighborhood stays presentable and... nice. ";
-            Char3name.text = "";
-            Char3speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "Splatthew";
+            Char3speech.text = "Aw man, thanks so much for everything!";
         }
-        else if (primeInt == 13)
-        {
-			
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = " The houses all match, nothing ugly like fences put up so kids don't accidentally run into the road chasing after balls.";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-        else if (primeInt == 14)
+        else if (primeInt == 33)
         {
 			DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
-            Char1speech.text = "Um...";
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
+            Char3name.text = "Splatthew";
+            Char3speech.text = "The Great Slungus Going-Away Blowout Bash has been a great success and shows no signs of slowing down!";
             // Turn off the "Next" button, turn on "Choice" buttons
-            nextButton.SetActive(false);
-            allowSpace = false;
-            Choice1a.SetActive(true); // function Choice1aFunct()
-            Choice1b.SetActive(true); // function Choice1bFunct()
+            //nextButton.SetActive(false);
+           // allowSpace = false;
+           // Choice1a.SetActive(true); // function Choice1aFunct()
+            //Choice1b.SetActive(true); // function Choice1bFunct()
         }
 
         // after choice 1a
-        else if (primeInt == 20)
+        else if (primeInt == 34)
         {
             //gameHandler.AddPlayerStat(1);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! Haha, no. It's just that I mandate everybody plant color coordinated flowers in their yards...";
+            Char1name.text = "YOU";
+            Char1speech.text = "On that note, actually... The HOA Lady's supposed to be back in fifteen minutes.";
+            Char2name.text = "";
+            Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 21)
+        else if (primeInt == 35)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "If you wanna keep living here, we've gotta start wrapping up now.";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 36)
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "...and it'd be such a shame if you couldn't see them all...";
-            Char3name.text = "";
-            Char3speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "Splatthew";
+            Char3speech.text = "But dude, we're having so much fun! We can't stop now! My friends are gonna be so mad if I tell ‘em they need to leave.";
 			primeInt = 39;
-        }
-
-        // after choice 1b
-        else if (primeInt == 30)
-        {
-            ArtChar2a.SetActive(false);
-            ArtChar2b.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! They can't get crushed in the street, we don't want <i> controversy.</i>";
-            Char3name.text = "";
-            Char3speech.text = "";
-			primeInt = 39;
-        }
- 
-		//conversation continues from both story choices:
-		else if (primeInt == 40)
-        {
-            ArtChar2b.SetActive(false);
-            ArtChar2a.SetActive(true);
-            Char1name.text = "YOU";
-            Char1speech.text = "...oh... I've been thinking about planting some hydrangeas, I've never had the space for them before.";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-		else if (primeInt == 41)
-        {
-            ArtChar2a.SetActive(false);
-            ArtChar2b.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Hydrangeas?! We only allow red or yellow flowers here!";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-		else if (primeInt == 42)
-        {
-            Char1name.text = "YOU";
-            Char1speech.text = "But hydrangeas are my favorite flower! And it's my house!";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-		else if (primeInt == 43)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "It might be <i> your </i> house and <i> your </i> yard, but there's someone you forgot to ask";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-		else if (primeInt == 44)
-        {
-            Char1name.text = "YOU";
-            Char1speech.text = "The neighbors if they're allergic?";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-		else if (primeInt == 45)
-        {
-            ArtChar2c.SetActive(true);
-            ArtChar2b.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Ha! As if I care what the neighbors think. No-- Me!";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-		else if (primeInt == 46)
-        {
-			ArtChar2c.SetActive(false);
-            Char1name.text = "";
-            Char2name.text = "";
-            Char2speech.text = " [<i> The HOA lady gets caught up in cackling to herself and walks off without saying good bye </i>]";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-		else if (primeInt == 47)
-        {
-            Char1name.text = "YOU";
-            Char1speech.text = "Surely the neighbors can’t be all bad…";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-		else if (primeInt == 48)
-        {
-            Char1name.text = "YOU";
-            Char1speech.text = "So what now? Do I unpack and wait for neighbors to say hi, or go out and meet them?";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-        }
-
-       else if (primeInt == 49)
-        {
-            DialogueDisplay.SetActive(false);
-            Char1name.text = "YOU";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-            // Turn off the "Next" button, turn on "Scene" button/s
-            nextButton.SetActive(false);
-            allowSpace = false;
-			NextScene1Button.SetActive(true);
+            NextScene1Button.SetActive(true);
             NextScene2Button.SetActive(true);
         }
-
 
         //Please do NOT delete this final bracket that ends the Next() function:
     }
@@ -368,7 +270,7 @@ public class Scene4bDialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "You WANT kids to run into the street...?!?";
+        Char1speech.text = "Yeah, right away! I'm... allergic to the cold. Severely allergic. I get horrible hives all over my-";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -382,7 +284,7 @@ public class Scene4bDialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
+        Char1speech.text = "Yeah, right away! You see, my... my pet iguana gets violent whenever it drops below 60 degrees. I have the scars to prove it";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -399,10 +301,10 @@ public class Scene4bDialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene2a");
+        SceneManager.LoadScene("Scene5b1");
     }
     public void SceneChange2()
     {
-        SceneManager.LoadScene("Scene2b");
+        SceneManager.LoadScene("Scene5b2");
     }
 }
