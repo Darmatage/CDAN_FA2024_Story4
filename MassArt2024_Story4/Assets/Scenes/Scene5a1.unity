@@ -228,13 +228,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 350025559}
     m_Modifications:
+    - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
+      propertyPath: m_text
+      value: I think it'll be OK
+      objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
       value: ButtonChoice1b
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4993633910152285195, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Pivot.x
@@ -323,14 +327,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Choice1bFunct
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene5a1Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -691,14 +695,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5600569, g: 0.77269846, b: 0.8679245, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8209c97a0cf2b4149a6a7a2f7ab471ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -750,23 +754,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5201058574981289319, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 6868968341113618656, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.55295527
       objectReference: {fileID: 0}
     - target: {fileID: 6868968341113618656, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6906610317373279883, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_Pivot.x
@@ -855,6 +859,10 @@ PrefabInstance:
     - target: {fileID: 7548207708458608490, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_Name
       value: PAUSE_MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548207708458608490, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8953434401178380070, guid: e8b2568f27691b042917e9472c465ad4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -990,14 +998,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange1
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene5a1Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1045,7 +1053,7 @@ RectTransform:
   m_GameObject: {fileID: 1107003780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 350025559}
@@ -1108,7 +1116,7 @@ GameObject:
   m_Layer: 5
   m_Name: TextChar3Name
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1129,8 +1137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 280, y: 60}
+  m_AnchoredPosition: {x: 12.9909, y: -0.9993}
+  m_SizeDelta: {x: 501.8442, y: 61.9986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297235522
 MonoBehaviour:
@@ -1537,7 +1545,7 @@ RectTransform:
   m_GameObject: {fileID: 1824597809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 350025559}
@@ -1689,14 +1697,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange2
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene5a1Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1742,7 +1750,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: '"NO!"'
+      value: Screw the HOA!
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
@@ -1750,7 +1758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4993633910152285195, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Pivot.x
@@ -1839,14 +1847,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Choice1aFunct
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene5a1Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1882,6 +1890,46 @@ PrefabInstance:
     - target: {fileID: 1807783181619588455, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
       propertyPath: m_Name
       value: DIALOGUE_DISPLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285018654044322214, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 501.8442
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285018654044322214, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61.9986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285018654044322214, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.9909
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285018654044322214, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799273717967965328, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 553.822
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799273717967965328, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -340.08902
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781226221780695828, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 501.8442
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781226221780695828, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61.9986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781226221780695828, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.9909
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781226221780695828, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9993
       objectReference: {fileID: 0}
     - target: {fileID: 7851675605839193031, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
       propertyPath: m_Pivot.x
@@ -2130,14 +2178,14 @@ PrefabInstance:
     - target: {fileID: 3051433006838404944, guid: e24d17f53b8fa9e4f8de2324696401c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 3051433006838404944, guid: e24d17f53b8fa9e4f8de2324696401c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Next
       objectReference: {fileID: 0}
     - target: {fileID: 3051433006838404944, guid: e24d17f53b8fa9e4f8de2324696401c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene5a1Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3051433006838404944, guid: e24d17f53b8fa9e4f8de2324696401c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

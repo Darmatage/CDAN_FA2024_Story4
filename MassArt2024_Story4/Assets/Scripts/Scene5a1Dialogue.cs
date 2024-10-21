@@ -46,7 +46,7 @@ public class Scene5a1Dialogue:MonoBehaviour
 
         //prop_HOAflyer.SetActive(false);
         //prop_HOApamphlet.SetActive(false);
-        ArtBg1.SetActive(false);
+        ArtBg1.SetActive(true);
         //ArtBg2.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -76,8 +76,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             // audioSource1.Play();
         }
         else if (primeInt == 2)
-        {
-            
+        {   
             DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "<i> knock knock <i>";
@@ -88,12 +87,14 @@ public class Scene5a1Dialogue:MonoBehaviour
         }
         else if (primeInt == 3)
         {
+        ArtChar3a.SetActive(true);
+        ArtChar3b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Neighbor 1's Daughter";
-            Char3speech.text = "Oh, it's you, PLAYER'S NAME.";
+            Char3speech.text = "Oh, it's you, New Neighbor!";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
@@ -107,16 +108,17 @@ public class Scene5a1Dialogue:MonoBehaviour
         }
         else if (primeInt == 5)
         {
-			//DialogueDisplay.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Neighbor 1's Daughter";
-            Char3speech.text = "MOM, PLAYER'S NAME IS HERE!";
+            Char3speech.text = "MOM, THE NEW NEIGHBOR IS HERE!";
         }
         else if (primeInt == 6)
         {
+        ArtChar2a.SetActive(true);
+        ArtChar2b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Neighbor 1";
@@ -124,16 +126,37 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
+
         else if (primeInt == 7)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "I decided to swing by the library and there's a Hobbyist Astronomy Organization that's apparently pretty new.";
+            Char1speech.text = "Do I remember correctly, you said you like astronomy?";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
         }
-		else if (primeInt == 8)
+        else if (primeInt == 8)
+        {
+        ArtChar3a.SetActive(false);
+        ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "Neighbor 1's Daughter";
+            Char3speech.text = "Yeah!";
+        }
+        else if (primeInt == 9)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "I decided to swing by the library like you suggested. There's a new Hobbyist Astronomy Organization!";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+		else if (primeInt == 10)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -142,22 +165,10 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "Neighbor 1's Daughter";
             Char3speech.text = "Aw, swell, sounds like a blast.";
         }
-		else if (primeInt == 9)
+		else if (primeInt == 11)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "Yeah, yeah, apparently other teens plan on going to their next meeting.";
-            Char2name.text = "";
-            Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
-            //nextButton.SetActive(false);
-            //allowSpace = false;
-            //Choice1a.SetActive(true);
-            //Choice1b.SetActive(true);
-        }
-		else if (primeInt == 20)
-        {
-            DialogueDisplay.SetActive(true);
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Neighbor 1";
@@ -165,17 +176,17 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 30)
+        else if (primeInt == 12)
         {
 			
             Char1name.text = "YOU";
-            Char1speech.text = "Well, actually, about that. Theres a program that would allow you to build an observatory on your roof free of cost.";
+            Char1speech.text = "Well, actually, about that. There's a program to help you build an observatory on your roof, free of cost.";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 31)
+        else if (primeInt == 13)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -184,8 +195,10 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "Neighbor 1's Daughter";
             Char3speech.text = "Sweet!";
         }
-        else if (primeInt == 32)
+        else if (primeInt == 14)
         {
+        ArtChar2a.SetActive(true);
+        ArtChar2b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Neighbor 1";
@@ -193,7 +206,55 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 33)
+	else if (primeInt == 15)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+            //hide next button, display choice buttons:
+            nextButton.SetActive(false);
+            allowSpace = false;
+            Choice1a.SetActive(true);
+            Choice1b.SetActive(true);
+        }
+
+
+//after choice 1a:
+        else if (primeInt == 20)
+        {
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Neighbor 1";
+            Char2speech.text = "Hah! Yeah. I really don't";
+            Char3name.text = "";
+            Char3speech.text = "";
+            primeInt=39;
+        }
+
+
+
+//after choice 1a:
+        else if (primeInt == 30)
+        {
+        ArtChar2a.SetActive(true);
+        ArtChar2b.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Neighbor 1";
+            Char2speech.text = "How so?";
+            Char3name.text = "";
+            Char3speech.text = "";
+            primeInt=39;
+        }
+
+
+
+        else if (primeInt == 40)
         {
 			DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
@@ -204,8 +265,10 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3speech.text = "";
         }
 
-        else if (primeInt == 34)
+        else if (primeInt == 41)
         {
+        ArtChar3a.SetActive(true);
+        ArtChar3b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -213,7 +276,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "Neighbor 1's Daughter";
             Char3speech.text = "Is it unobtrusive looking?";
         }
-        else if (primeInt == 35)
+        else if (primeInt == 42)
         {
             Char1name.text = "YOU";
             Char1speech.text = "From my understanding, not at all.";
@@ -222,8 +285,10 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 36)
+        else if (primeInt == 43)
         {
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Neighbor 1";
@@ -239,6 +304,36 @@ public class Scene5a1Dialogue:MonoBehaviour
     }
 
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
+
+ public void Choice1aFunct()
+    {
+        Char1name.text = "YOU";
+        Char1speech.text = "Do we really want to allow this corrupt HOA to dictate every part of our lives?";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        primeInt = 19;
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+    public void Choice1bFunct()
+    {
+        Char1name.text = "YOU";
+        Char1speech.text = "I think we can get around that here.";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        primeInt = 29;
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
+
 
     public void SceneChange1()
     {
