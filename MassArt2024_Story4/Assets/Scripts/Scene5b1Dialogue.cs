@@ -31,15 +31,13 @@ public class Scene5b1Dialogue : MonoBehaviour
     public GameObject NextScene2Button;
     public GameObject nextButton;
     public string playerName;
-    public GameHandler gameHandler;
-    public GameObject inputField;
-    public GameObject NameEnterButton;
     //public AudioSource audioSource1;
     private bool allowSpace = true;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -51,10 +49,6 @@ public class Scene5b1Dialogue : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-        NameEnterButton.SetActive(false);
-        inputField.SetActive(false);
-    string pNameTemp = gameHandler.GetName();
-        playerName = pNameTemp.ToUpper();
     }
 
     // Use the spacebar as a faster "Next" button:
@@ -81,7 +75,7 @@ public class Scene5b1Dialogue : MonoBehaviour
         {
             
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ok, everybody, I'm so sorry, but I need all of you to leave right now";
             Char2name.text = "";
             Char2speech.text = "";
@@ -102,7 +96,7 @@ public class Scene5b1Dialogue : MonoBehaviour
         {
             ArtBg1.SetActive(false);
             ArtBg2.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Wow. Huh. That was fast.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -111,7 +105,7 @@ public class Scene5b1Dialogue : MonoBehaviour
          else if (primeInt == 5)
         {
             
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Just in time, too! I think I just heard the HOA lady pull up!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -128,7 +122,7 @@ public class Scene5b1Dialogue : MonoBehaviour
          else if (primeInt == 7)
         {
             
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Really? I thought you were mad at me for making you end the party so suddenly.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -294,7 +288,7 @@ public class Scene5b1Dialogue : MonoBehaviour
             nextButton.SetActive(false);
             allowSpace = false;
 			NextScene1Button.SetActive(true);
-            NextScene2Button.SetActive(true);
+            //NextScene2Button.SetActive(true);
         }
 
 
@@ -328,11 +322,9 @@ public class Scene5b1Dialogue : MonoBehaviour
     }
 
 
-
-
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene2a");
+        SceneManager.LoadScene("SceneWin");
     }
     public void SceneChange2()
     {

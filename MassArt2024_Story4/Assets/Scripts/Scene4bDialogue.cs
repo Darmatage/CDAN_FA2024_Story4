@@ -34,10 +34,12 @@ public class Scene4bDialogue : MonoBehaviour
     public GameObject NextScene2Button;
     public GameObject nextButton;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar2a.SetActive(false);
         ArtChar2b.SetActive(false);
@@ -81,7 +83,7 @@ public class Scene4bDialogue : MonoBehaviour
         {
             
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Uh, hey, haha, how are you doing?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -106,7 +108,7 @@ public class Scene4bDialogue : MonoBehaviour
         ArtChar2a.SetActive(false);
         ArtChar2b.SetActive(false);
         ArtChar2c.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I've got an emergency and I need you and only you to help me out as soon as possible!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -125,7 +127,7 @@ public class Scene4bDialogue : MonoBehaviour
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "So there's this super specific part on my water heater that just broke, and the only place that sells them nearby is Gleebus's Hardware.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -143,7 +145,7 @@ public class Scene4bDialogue : MonoBehaviour
         }
 		else if (primeInt == 8)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yeah, I know, and my car's been giving me trouble.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -195,7 +197,7 @@ public class Scene4bDialogue : MonoBehaviour
         ArtBg1.SetActive(true);
         ArtBg2.SetActive(false);
 			
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Dude, she's gone! We've got about four hours starting now!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -234,7 +236,7 @@ public class Scene4bDialogue : MonoBehaviour
         else if (primeInt == 34)
         {
             //gameHandler.AddPlayerStat(1);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "On that note, actually... The HOA Lady's supposed to be back in fifteen minutes.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -243,7 +245,7 @@ public class Scene4bDialogue : MonoBehaviour
         }
         else if (primeInt == 35)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "If you wanna keep living here, we've gotta start wrapping up now.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -269,7 +271,7 @@ public class Scene4bDialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Yeah, right away! I'm... allergic to the cold. Severely allergic. I get horrible hives all over my-";
         Char2name.text = "";
         Char2speech.text = "";
@@ -283,7 +285,7 @@ public class Scene4bDialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Yeah, right away! You see, my... my pet iguana gets violent whenever it drops below 60 degrees. I have the scars to prove it";
         Char2name.text = "";
         Char2speech.text = "";

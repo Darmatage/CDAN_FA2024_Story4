@@ -1548,7 +1548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: Explore the backyard
+      value: Head to the library
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
@@ -1641,14 +1641,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange1
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene3aDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1848,14 +1848,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SceneChange2
+      value: SceneChange3
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene3aDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2314,7 +2314,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: Go find the HOA lady
+      value: Go back to Splatthew
       objectReference: {fileID: 0}
     - target: {fileID: 4425490232382626375, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_Name
@@ -2407,14 +2407,14 @@ PrefabInstance:
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 350025560}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange2
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene1Dialogue, Assembly-CSharp
+      value: Scene3aDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8433560169666176434, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

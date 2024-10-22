@@ -32,10 +32,12 @@ public class Scene2bDialogue : MonoBehaviour
     public GameObject nextButton;
     public AudioSource SFX_Knock;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -73,7 +75,7 @@ public class Scene2bDialogue : MonoBehaviour
         else if (primeInt == 2)
         {
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I guess I should go and meet my other neighbors. I can't show up empty handed, maybe I can offer some of that soda I just bought?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -81,7 +83,7 @@ public class Scene2bDialogue : MonoBehaviour
         else if (primeInt == 3)
         { 
 			SFX_Knock.Play();
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "<i><b> knock knock </i></b>";
             Char2name.text = "";
             Char2speech.text = "";
@@ -108,7 +110,7 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "A party? Is it someone's birthday?";
             Char2name.text = "";
             Char2speech.text = " ";
@@ -143,7 +145,7 @@ public class Scene2bDialogue : MonoBehaviour
         }
         else if (primeInt ==10)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh, that sounds like a lot of fun!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -208,7 +210,7 @@ public class Scene2bDialogue : MonoBehaviour
         else if (primeInt == 22)
         {
 
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Um... what?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -244,7 +246,7 @@ public class Scene2bDialogue : MonoBehaviour
         else if (primeInt == 32)
         {
 
-            Char1name.text = "You";
+            Char1name.text = playerName;
             Char1speech.text = "(Well, I guess I'll return my neighbor's plate)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -260,7 +262,7 @@ public class Scene2bDialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "YEAH, MY FELLOW DUDEBRO! LET'S PARTY!!!!";
         Char2name.text = "";
         Char2speech.text = "";
@@ -272,7 +274,7 @@ public class Scene2bDialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Maybe not... I still have to settle down.";
         Char2name.text = "";
         Char2speech.text = "";

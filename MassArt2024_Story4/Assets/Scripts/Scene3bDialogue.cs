@@ -32,10 +32,12 @@ public class Scene3bDialogue : MonoBehaviour
     public GameObject nextButton;
     public AudioSource SFX_Knock;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -72,7 +74,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 2)
         {
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Hey, nice living room";
             Char2name.text = "";
             Char2speech.text = "";
@@ -89,7 +91,7 @@ public class Scene3bDialogue : MonoBehaviour
 
         else if (primeInt == 4)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Wait, what? I thought we were planning your friend's party?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -154,7 +156,7 @@ public class Scene3bDialogue : MonoBehaviour
          else if (primeInt == 11)
         {
 			DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(Yeesh... What is he expecting from me?)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -217,7 +219,7 @@ public class Scene3bDialogue : MonoBehaviour
 		
        else if (primeInt == 42)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Uh...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -245,7 +247,7 @@ public class Scene3bDialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Alright, I'm hearing you out, but where do I come into this plan?";
         Char2name.text = "";
         Char2speech.text = "";
@@ -257,7 +259,7 @@ public class Scene3bDialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "...whuh? Huh whuh??";
         Char2name.text = "";
         Char2speech.text = "";
