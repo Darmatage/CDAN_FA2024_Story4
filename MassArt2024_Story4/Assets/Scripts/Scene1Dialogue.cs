@@ -32,16 +32,14 @@ public class Scene1Dialogue : MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    public string playerName;
-    public GameHandler gameHandler;
-    public GameObject inputField;
-    public GameObject NameEnterButton;
     //public AudioSource audioSource1;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -55,10 +53,6 @@ public class Scene1Dialogue : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-        NameEnterButton.SetActive(false);
-        inputField.SetActive(false);
-    string pNameTemp = gameHandler.GetName();
-        playerName = pNameTemp.ToUpper();
     }
 
     // Use the spacebar as a faster "Next" button:
@@ -85,14 +79,14 @@ public class Scene1Dialogue : MonoBehaviour
         {
             
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Wow, despite the current state of the economy, I'm a homeowner!";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Can't wait to make wonderful new memories in my house by myself without several roommates.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -107,7 +101,7 @@ public class Scene1Dialogue : MonoBehaviour
         }
         else if (primeInt == 5)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh damn, somebody's at the door I now own.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -120,7 +114,7 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = " Hello! I'm in charge of the Homeowners' Association, you must have seen our flyers?";
+            Char2speech.text = "Hello, " + playerName + "! I'm in charge of the Homeowners' Association, you must have seen our flyers?";
         }
         else if (primeInt == 7)
         {
@@ -164,8 +158,6 @@ public class Scene1Dialogue : MonoBehaviour
         }
         else if (primeInt == 11)
         {
-            NameEnterButton.SetActive(true);
-            inputField.SetActive(true);
             Char1name.text = playerName;
             Char1speech.text = "I just got here, what is it you do?";
             Char2name.text = "";
@@ -173,8 +165,6 @@ public class Scene1Dialogue : MonoBehaviour
         }
         else if (primeInt == 12)
         {
-            NameEnterButton.SetActive(false);
-            inputField.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";

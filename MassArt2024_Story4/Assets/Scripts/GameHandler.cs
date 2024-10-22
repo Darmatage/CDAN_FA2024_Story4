@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +9,8 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour {
 
         public static int playerStat1;
-        public static string playerName = "YOU";
+        public static string playerName = "FRED";
+
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer mixer;

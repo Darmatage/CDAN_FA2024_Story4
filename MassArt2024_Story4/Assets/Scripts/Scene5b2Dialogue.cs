@@ -21,8 +21,10 @@ public class Scene5b2Dialogue : MonoBehaviour
     public GameObject ArtChar1a;//chara_HOAlady_happy
     public GameObject ArtChar1b;//chara_HOAlady_angry
     public GameObject ArtChar1c; //chara_HOAlady_pleased
-    //public GameObject ArtChar1b;
-    //public GameObject ArtChar2;
+
+    public GameObject ArtChar2a;
+    public GameObject ArtChar2b;
+
     public GameObject ArtBg1;//bg_your_house_interior_doorclosed
     public GameObject ArtBg2;//bg_your_house_interior_dooropen
     public GameObject Choice1a;
@@ -30,20 +32,21 @@ public class Scene5b2Dialogue : MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    public string playerName;
-    public GameHandler gameHandler;
-    public GameObject inputField;
-    public GameObject NameEnterButton;
     public AudioSource SFX_Knock;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(false);
+
         ArtBg1.SetActive(true);
         ArtBg2.SetActive(false);
         Choice1a.SetActive(false);
@@ -51,10 +54,6 @@ public class Scene5b2Dialogue : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-        NameEnterButton.SetActive(false);
-        inputField.SetActive(false);
-    string pNameTemp = gameHandler.GetName();
-        playerName = pNameTemp.ToUpper();
     }
 
     // Use the spacebar as a faster "Next" button:
@@ -91,7 +90,7 @@ public class Scene5b2Dialogue : MonoBehaviour
         else if (primeInt == 3)
         {
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh no.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -277,7 +276,7 @@ public class Scene5b2Dialogue : MonoBehaviour
 		else if (primeInt == 47)
         {
             Char1name.text = playerName;
-            Char1speech.text = "Surely the neighbors can’t be all bad…";
+            Char1speech.text = "Surely the neighbors can't be all bad...";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -301,7 +300,7 @@ public class Scene5b2Dialogue : MonoBehaviour
             nextButton.SetActive(false);
             allowSpace = false;
 			NextScene1Button.SetActive(true);
-            NextScene2Button.SetActive(true);
+            //NextScene2Button.SetActive(true);
         }
 
 
@@ -312,7 +311,7 @@ public class Scene5b2Dialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "You WANT kids to run into the street...?!?";
+        Char1speech.text = "sdsdf";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 19;
@@ -324,7 +323,7 @@ public class Scene5b2Dialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
+        Char1speech.text = "sdsfsf";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;
@@ -339,7 +338,7 @@ public class Scene5b2Dialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene2a");
+        SceneManager.LoadScene("SceneLose");
     }
     public void SceneChange2()
     {

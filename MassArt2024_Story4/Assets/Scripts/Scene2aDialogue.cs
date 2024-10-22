@@ -33,10 +33,12 @@ public class Scene2aDialogue : MonoBehaviour
     public GameObject nextButton;
     //public AudioSource audioSource1;
     private bool allowSpace = true;
+    string playerName;
 
     // Set initial visibility. Added images or buttons need to also be SetActive(false);
     void Start()
     {
+        playerName = GameHandler.playerName;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -75,15 +77,15 @@ public class Scene2aDialogue : MonoBehaviour
         {
 
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
-            Char1speech.text = "Damn, I didn’t realize I had so much stuff.";
+            Char1name.text = playerName;
+            Char1speech.text = "Damn, I didn't realize I had so much stuff.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "I don’t even really have hobbies, why are there so many boxes? Guess I better start cracking.";
+            Char1name.text = playerName;
+            Char1speech.text = "I don't even really have hobbies, why are there so many boxes? Guess I better start cracking.";
             Char2name.text = "";
             Char2speech.text = "";
       
@@ -104,12 +106,12 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Hello, I live next door! I saw the moving truck sitting out front yesterday and was baking some cookies earlier so I figured I’d pop on by.";
+            Char2speech.text = "Hello, I live next door! I saw the moving truck sitting out front yesterday and was baking some cookies earlier so I figured Iï¿½d pop on by.";
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "Oh, wow, you didn’t have to do that, thank you.";
+            Char1name.text = playerName;
+            Char1speech.text = "Oh, wow, you didnï¿½t have to do that, thank you.";
             Char2name.text = "";
             Char2speech.text = " ";
         }
@@ -131,11 +133,11 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "It’s no trouble, I remember when I first moved in and didn’t know anybody yet so I wanted to be a friendly face.";
+            Char2speech.text = "It's no trouble, I remember when I first moved in and didn't know anybody yet so I wanted to be a friendly face.";
         }
         else if (primeInt == 9)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -151,7 +153,7 @@ public class Scene2aDialogue : MonoBehaviour
         {
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "The HOA woman was here earlier, she seemed nice. Was she not here when you first moved in?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -162,7 +164,7 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "<i>sigh</i> She hasn’t even been living here as long as my toddler has and yet she’s dead set on sucking all the personality out of the street.";
+            Char2speech.text = "<i>sigh</i> She hasn't even been living here as long as my toddler has and yet sheï¿½s dead set on sucking all the personality out of the street.";
             primeInt = 15;
         }
 
@@ -171,9 +173,9 @@ public class Scene2aDialogue : MonoBehaviour
         {
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "";
-            Char2name.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasn’t getting my hopes up about making new friends in the neighborhood.";
+            Char2name.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasnï¿½t getting my hopes up about making new friends in the neighborhood.";
             Char2speech.text = "";
             primeInt = 15;
         }
@@ -182,7 +184,7 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Everybody else in the neighborhood is very friendly, I promise. It can get a little rambunctious, but it’s great fun.";
+            Char2speech.text = "Everybody else in the neighborhood is very friendly, I promise. It can get a little rambunctious, but itï¿½s great fun.";
             primeInt = 15;
         }
 
@@ -190,7 +192,7 @@ public class Scene2aDialogue : MonoBehaviour
         else if (primeInt == 15)
         {
 
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "How come the HOA has such a prominent presence? It sounds like everything was going just fine without it.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -202,12 +204,12 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "It was! Her husband slid the mayor… a generous gift and got town hall to pass some fluff law requiring an HOA for our street.";
+            Char2speech.text = "It was! Her husband slid the mayor a generous gift and got town hall to pass some fluff law requiring an HOA for our street.";
         }
         else if (primeInt == 17)
         {
 
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "That sounds illegal?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -227,13 +229,13 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Her pushover of a husband would do anything to make her happy, the poor sap…";
+            Char2speech.text = "Her pushover of a husband would do anything to make her happy, the poor sapï¿½";
         }
         else if (primeInt == 20)
         {
 
-            Char1name.text = "YOU";
-            Char1speech.text = "Well… whatever works for them?";
+            Char1name.text = playerName;
+            Char1speech.text = "Well, whatever works for them?";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -252,7 +254,7 @@ public class Scene2aDialogue : MonoBehaviour
         else if (primeInt == 22)
         {
             ArtChar1a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "She was nice.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -260,7 +262,7 @@ public class Scene2aDialogue : MonoBehaviour
 
         else if (primeInt == 23)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
@@ -278,7 +280,7 @@ public class Scene2aDialogue : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "The HOA woman was here earlier, she seemed nice. Was she not here when you first moved in?";
         Char2name.text = "";
         Char2speech.text = "";
@@ -290,8 +292,8 @@ public class Scene2aDialogue : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
-        Char1speech.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasn’t getting my hopes up about making new friends in the neighborhood.";
+        Char1name.text = playerName;
+        Char1speech.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasnï¿½t getting my hopes up about making new friends in the neighborhood.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 12;
