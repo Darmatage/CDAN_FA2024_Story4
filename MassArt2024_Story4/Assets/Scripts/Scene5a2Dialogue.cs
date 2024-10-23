@@ -15,19 +15,16 @@ public class Scene5a2Dialogue : MonoBehaviour
     public TMP_Text Char1speech;
     public TMP_Text Char2name;
     public TMP_Text Char2speech;
-    //public TMP_Text Char3name;
-    //public TMP_Text Char3speech;
     public GameObject DialogueDisplay;
     public GameObject ArtChar1a;//chara_HOAlady_happy
     public GameObject ArtChar1b;//chara_HOAlady_angry
     public GameObject ArtChar1c; //chara_HOAlady_pleased
-    public GameObject ArtChar1d;
-    public GameObject ArtChar1e;
-    public GameObject ArtChar1f;
-    //public GameObject ArtChar1b;
-    //public GameObject ArtChar2;
-    public GameObject ArtBg1;//bg_your_house_interior_doorclosed
-    public GameObject ArtBg2;//bg_your_house_interior_dooropen
+    public GameObject ArtChar1d; //chara_HOAlady_ONPHONEangry
+    public GameObject ArtChar1e;//chara_HOAlady_ONPHONEexasperated
+    public GameObject ArtChar1f;//chara_HOAlady_ONPHONEpleased
+    public GameObject prop_booklet;
+    public GameObject ArtBg1;//bg_library
+    public GameObject ArtBg2;//bg_HOAlady_house
     public GameObject Choice1a;
     public GameObject Choice1b;
     public GameObject NextScene1Button;
@@ -45,6 +42,10 @@ public class Scene5a2Dialogue : MonoBehaviour
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
+        ArtChar1d.SetActive(false);
+        ArtChar1e.SetActive(false);
+        ArtChar1f.SetActive(false);
+        prop_booklet.SetActive(false);
         ArtBg1.SetActive(true);
         ArtBg2.SetActive(false);
         Choice1a.SetActive(false);
@@ -79,110 +80,68 @@ public class Scene5a2Dialogue : MonoBehaviour
 
             DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "Wow, despite the current state of the economy, I'm a homeowner!";
+            Char1speech.text = "That grant the Head Hobbyist mentioned sounds like it’d really help my neighbors. But it’d displease the HOA lady and you know...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
             Char1name.text = playerName;
-            Char1speech.text = "Can't wait to make wonderful new memories in my house by myself without several roommates.";
+            Char1speech.text = "you should always aim to please the people in charge of you regardless of whether or not they have your best interests in mind.";
             Char2name.text = "";
             Char2speech.text = "";
-            //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
         {
             Char1name.text = "";
-            Char1speech.text = "";
+            Char1speech.text = "<i><b>knock knock </i></b>";
             Char2name.text = "";
-            Char2speech.text = "[<b><i>knock knock</i></b>]";
+            Char2speech.text = "";
         }
         else if (primeInt == 5)
         {
-            Char1name.text = playerName;
-            Char1speech.text = "Oh damn, somebody's at the door I now own.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "Oh, hello " + playerName;
         }
         else if (primeInt == 6)
         {
-            ArtBg1.SetActive(false);
-            ArtBg2.SetActive(true);
-            ArtChar1a.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Hello, " + playerName + "! I'm in charge of the Homeowners' Association, you must have seen our flyers?";
-        }
-        else if (primeInt == 7)
-        {
-            DialogueDisplay.SetActive(false);
-            ArtChar1a.SetActive(false);
-            prop_HOAflyer.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "[<i> HOA lady hands over a flyer </i>]";
-        }
-        else if (primeInt == 8)
-        {
-            DialogueDisplay.SetActive(true);
-            ArtChar1a.SetActive(true);
-            prop_HOAflyer.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Or received one of our pamphlets in the mail?";
-        }
-        else if (primeInt == 9)
-        {
-            DialogueDisplay.SetActive(false);
-            ArtChar1a.SetActive(false);
-            prop_HOApamphlet.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "[<i> HOA lady hands over a pamphlet, it's <b>disgustingly</b> thick</i>]";
-        }
-        else if (primeInt == 10)
-        {
-            DialogueDisplay.SetActive(true);
-            ArtChar1a.SetActive(true);
-            prop_HOApamphlet.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "It's riveting literature. What's your name? Let me add you to the neighborhood’s online messaging board.";
-        }
-        else if (primeInt == 11)
-        {
+          
             Char1name.text = playerName;
-            Char1speech.text = "I just got here, what is it you do?";
+            Char1speech.text = "Hi, I just thought I’d pop by and tell you something I just learned since you always have people’s best interests at heart.";
             Char2name.text = "";
             Char2speech.text = "";
         }
-        else if (primeInt == 12)
+        else if (primeInt == 7)
         {
+         
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "The HOA makes sure the neighborhood stays presentable and... nice. ";
+            Char2speech.text = "They might not think I do, but I do care. Just about different things than\r\nthem. I operate on a higher level, you know?\r\n";
         }
-        else if (primeInt == 13)
+        else if (primeInt == 8)
         {
-
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = " The houses all match, nothing ugly like fences put up so kids don't accidentally run into the road chasing after balls.";
-        }
-
-        else if (primeInt == 14)
-        {
-            DialogueDisplay.SetActive(true);
+         
             Char1name.text = playerName;
-            Char1speech.text = "Um...";
+            Char1speech.text = "Of course, of course, speaking of higher levels…";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 9)
+        {
+        
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "Is that stupid teen hanging out on her roof like an aesthetic ruining\r\ndelinquent again?";
+        }
+        else if (primeInt == 10)
+        {
+    
+            Char1name.text = playerName;
+            Char1speech.text = "What?";
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off the "Next" button, turn on "Choice" buttons
@@ -199,104 +158,170 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! Haha, no. It's just that I mandate everybody plant color coordinated flowers in their yards...";
-        }
-        else if (primeInt == 21)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "...and it'd be such a shame if you couldn't see them all...";
+            Char2speech.text = "You know how it is, every teen and young person is stupid and reckless, but not me as a youth. I was a perfect darling baby angel";
             primeInt = 39;
         }
 
         // after choice 1b
         else if (primeInt == 30)
         {
-            ArtChar1a.SetActive(false);
-            ArtChar1b.SetActive(true);
+
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! They can't get crushed in the street, we don't want <i> controversy.</i>";
+            Char2speech.text = "Ha! As if she cares, she’s not even around to hear me obliterate her ass.";
             primeInt = 39;
         }
 
         //conversation continues from both story choices:
         else if (primeInt == 40)
         {
-            ArtChar1b.SetActive(false);
-            ArtChar1a.SetActive(true);
+      
             Char1name.text = playerName;
-            Char1speech.text = "...oh... I've been thinking about planting some hydrangeas, I've never had the space for them before.";
+            Char1speech.text = "Views on the teen’s worth as a person aside, it turns out there’s a Hobbyist Astronomy Organization now.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 41)
         {
-            ArtChar1a.SetActive(false);
-            ArtChar1b.SetActive(true);
+
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Hydrangeas?! We only allow red or yellow flowers here!";
+            Char2speech.text = "Ugh, the horror. They’re probably trying to convince more people to hang out on their roof.";
         }
         else if (primeInt == 42)
         {
             Char1name.text = playerName;
-            Char1speech.text = "But hydrangeas are my favorite flower! And it's my house!";
+            Char1speech.text = "Well, actually, they’re providing free resources for getting home observatories built.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 43)
         {
             Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "It might be <i> your </i> house and <i> your </i> yard, but there's someone you forgot to ask";
-        }
-        else if (primeInt == 44)
-        {
-            Char1name.text = playerName;
-            Char1speech.text = "The neighbors if they're allergic?";
+            Char1speech.text = "booklet";
             Char2name.text = "";
             Char2speech.text = "";
         }
-        else if (primeInt == 45)
+        else if (primeInt == 44)
         {
-            ArtChar1c.SetActive(true);
-            ArtChar1b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Ha! As if I care what the neighbors think. No-- Me!";
+            Char2speech.text = "WHAT?! This cannot be allowed to continue. Who’s in charge there?";
+        }
+        else if (primeInt == 45)
+        {
+     
+            Char1name.text = playerName;
+            Char1speech.text = "Some pointy eared idiot old man wearing a foolish bow tie.";
+            Char2name.text = "";
+            Char2speech.text = "";
         }
 
         else if (primeInt == 46)
         {
-            ArtChar1c.SetActive(false);
+    
             Char1name.text = "";
             Char2name.text = "";
-            Char2speech.text = " [<i> The HOA lady gets caught up in cackling to herself and walks off without saying good bye </i>]";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "I know <i>exactly</i> who you’re talking about! I’ll take care of this.";
         }
 
         else if (primeInt == 47)
         {
-            Char1name.text = playerName;
-            Char1speech.text = "Surely the neighbors can’t be all bad…";
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "";
+            Char2speech.text = "...";
         }
 
         else if (primeInt == 48)
         {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "Hello! I’ve heard you’ve started a new hobbyist group. Dissolve it.";
+        }
+        else if (primeInt == 49)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "...";
+        }
+        else if (primeInt == 50)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "Do I sound like I care? Your granddaughter’s just started first grade, hasn’t she?";
+        }
+        else if (primeInt == 51)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "...";
+        }
+        else if (primeInt == 52)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "If you don’t dissolve it she might herself suddenly unenrolled from the only decent elementary school in the area.";
+        }
+        else if (primeInt == 53)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "...";
+        }
+        else if (primeInt == 54)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "How is that possible, that must be illegal? Pish posh, as if I give a damn about what’s illegal. All that concerns you is that I’ve got connections you don’t.";
+        }
+        else if (primeInt == 55)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "...";
+        }
+        else if (primeInt == 56)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = " …excellent. I hope we don’t meet again.";
+        }
+        else if (primeInt == 57)
+        {
             Char1name.text = playerName;
-            Char1speech.text = "So what now? Do I unpack and wait for neighbors to say hi, or go out and meet them?";
+            Char1speech.text = "That go well?";
             Char2name.text = "";
             Char2speech.text = "";
         }
-
-        else if (primeInt == 49)
+        else if (primeInt == 58)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "HOA Lady";
+            Char2speech.text = "Very, thank you very much for telling me about that. You’ve been useful.";
+        }
+        else if (primeInt == 59)
+        {
+            Char1name.text = playerName;
+            Char1speech.text = "I aim to please.";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 60)
         {
             DialogueDisplay.SetActive(false);
             Char1name.text = playerName;
@@ -318,7 +343,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "You WANT kids to run into the street...?!?";
+        Char1speech.text = "Yeah, she’s stupid. It’s definitely not that adults inherently view teens as an inferior species and that has nothing to do with when people were actually born.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 19;
@@ -330,7 +355,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
+        Char1speech.text = "Hey! She is actually quite smart! Also it’s kind of sad for a full grown adult to be picking on someone who can’t even drive.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;
