@@ -398,6 +398,6 @@ public class Scene5a2Dialogue : MonoBehaviour
     }
     public void SceneChange2()
     {
-        SceneManager.LoadScene("Scene2b"); //placeholder need to change the scene number later
+        SceneManager.LoadScene("SceneWin"); 
     }
 }
