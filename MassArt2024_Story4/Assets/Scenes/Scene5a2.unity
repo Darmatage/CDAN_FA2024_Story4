@@ -641,7 +641,7 @@ MonoBehaviour:
   Char2speech: {fileID: 2241875081196531429}
   DialogueDisplay: {fileID: 2241875081196531428}
   ArtChar1a: {fileID: 348166602}
-  ArtChar1b: {fileID: 1764086702}
+  ArtChar1b: {fileID: 1186015263}
   ArtChar1c: {fileID: 1614500056}
   ArtChar1d: {fileID: 305365136}
   ArtChar1e: {fileID: 725268980}
@@ -2042,6 +2042,10 @@ PrefabInstance:
     - target: {fileID: 1807783181619588455, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
       propertyPath: m_Name
       value: DIALOGUE_DISPLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807783181619588455, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7851675605839193031, guid: d1bc071fc104456468301c4b91a9351b, type: 3}
       propertyPath: m_Pivot.x

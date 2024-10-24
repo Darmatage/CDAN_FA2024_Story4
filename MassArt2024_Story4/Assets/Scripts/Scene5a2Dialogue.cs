@@ -80,19 +80,21 @@ public class Scene5a2Dialogue : MonoBehaviour
 
             DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "That grant the Head Hobbyist mentioned sounds like it’d really help my neighbors. But it’d displease the HOA lady and you know...";
+            Char1speech.text = "That grant sounds like it’d really help my neighbors. But it’d upset the HOA lady and you know...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
             Char1name.text = playerName;
-            Char1speech.text = "you should always aim to please the people in charge of you regardless of whether or not they have your best interests in mind.";
+            Char1speech.text = "you should always aim to please people in charge regardless of whether they have your best interests in mind.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 4)
         {
+            ArtBg1.SetActive(false);
+            ArtBg2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "<i><b>knock knock </i></b>";
             Char2name.text = "";
@@ -100,6 +102,7 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 5)
         {
+            ArtChar1a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -109,17 +112,18 @@ public class Scene5a2Dialogue : MonoBehaviour
         {
           
             Char1name.text = playerName;
-            Char1speech.text = "Hi, I just thought I’d pop by and tell you something I just learned since you always have people’s best interests at heart.";
+            Char1speech.text = "Hi, I just thought I’d pop by and tell you something since you always have people’s best interests at heart.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 7)
         {
-         
+            ArtChar1a.SetActive(false);
+            ArtChar1c.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "They might not think I do, but I do care. Just about different things than\r\nthem. I operate on a higher level, you know?\r\n";
+            Char2speech.text = "They might not think I do, but I do care. Just about different things than them. I operate on a higher level, you know?";
         }
         else if (primeInt == 8)
         {
@@ -131,11 +135,12 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 9)
         {
-        
+            ArtChar1c.SetActive(false);
+            ArtChar1b.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Is that stupid teen hanging out on her roof like an aesthetic ruining\r\ndelinquent again?";
+            Char2speech.text = "Is that stupid teen hanging out on her roof like an aesthetic ruining delinquent again?";
         }
         else if (primeInt == 10)
         {
@@ -154,7 +159,8 @@ public class Scene5a2Dialogue : MonoBehaviour
         // after choice 1a
         else if (primeInt == 20)
         {
-            //gameHandler.AddPlayerStat(1);
+            ArtChar1c.SetActive(true);
+            ArtChar1b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -176,7 +182,8 @@ public class Scene5a2Dialogue : MonoBehaviour
         //conversation continues from both story choices:
         else if (primeInt == 40)
         {
-      
+            ArtChar1c.SetActive(false);
+            ArtChar1b.SetActive(true);
             Char1name.text = playerName;
             Char1speech.text = "Views on the teen’s worth as a person aside, it turns out there’s a Hobbyist Astronomy Organization now.";
             Char2name.text = "";
@@ -199,13 +206,19 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 43)
         {
+            ArtChar1b.SetActive (false);
+            DialogueDisplay.SetActive(false);
+            prop_booklet.SetActive(true);
             Char1name.text = "";
-            Char1speech.text = "booklet";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 44)
         {
+            ArtChar1b.SetActive(true);
+            DialogueDisplay.SetActive(true);
+            prop_booklet.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -231,6 +244,8 @@ public class Scene5a2Dialogue : MonoBehaviour
 
         else if (primeInt == 47)
         {
+            ArtChar1b.SetActive(false);
+            ArtChar1f.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -246,6 +261,8 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 49)
         {
+            ArtChar1f.SetActive (false);
+            ArtChar1e.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -267,6 +284,8 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 52)
         {
+            ArtChar1e.SetActive (false);
+            ArtChar1d.SetActive (true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -284,10 +303,12 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "How is that possible, that must be illegal? Pish posh, as if I give a damn about what’s illegal. All that concerns you is that I’ve got connections you don’t.";
+            Char2speech.text = "How is that possible, that must be illegal? Pish posh, as if I give a damn about what’s illegal.";
         }
         else if (primeInt == 55)
         {
+            ArtChar1d.SetActive(false);
+            ArtChar1f.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -302,6 +323,8 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 57)
         {
+            ArtChar1f.SetActive (false);
+            ArtChar1c.SetActive(true);
             Char1name.text = playerName;
             Char1speech.text = "That go well?";
             Char2name.text = "";
@@ -323,6 +346,7 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 60)
         {
+            ArtChar1c.SetActive (false);
             DialogueDisplay.SetActive(false);
             Char1name.text = playerName;
             Char1speech.text = "";
@@ -343,7 +367,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Yeah, she’s stupid. It’s definitely not that adults inherently view teens as an inferior species and that has nothing to do with when people were actually born.";
+        Char1speech.text = "Yeah, she’s stupid. It’s definitely not that adults inherently view teens as an inferior species.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 19;
@@ -355,7 +379,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Hey! She is actually quite smart! Also it’s kind of sad for a full grown adult to be picking on someone who can’t even drive.";
+        Char1speech.text = "Hey! She is actually quite smart! Also it’s kind of sad for a full adult to pick on someone who can’t even drive.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;
