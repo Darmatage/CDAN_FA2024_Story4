@@ -339,10 +339,10 @@ public class Scene5a1Dialogue:MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene5b1");
+        SceneManager.LoadScene("Scenec1");
     }
     public void SceneChange2()
     {
-        SceneManager.LoadScene("Scene5b2");
+        SceneManager.LoadScene("Scene5c1");
     }
 }
