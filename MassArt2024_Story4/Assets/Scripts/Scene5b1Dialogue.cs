@@ -137,33 +137,16 @@ public class Scene5b1Dialogue : MonoBehaviour
             Char2speech.text = "Mad at you?";
         }
 
-         else if (primeInt == 9)
-        {
-            ArtChar1a.SetActive(true);
-            ArtChar1b.SetActive(false);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "Splatthew";
-            Char2speech.text = " Dude, I could never!";
-        }
-
-         else if (primeInt == 10)
-        {
-            
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "Splatthew";
-            Char2speech.text = "You're the best bro ever!";
-        }
+        
 
  
  
 
-        else if (primeInt == 14)
+        else if (primeInt == 9)
         {
 			DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "Um...";
+            Char1speech.text = "...yeah...";
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off the "Next" button, turn on "Choice" buttons
@@ -179,15 +162,15 @@ public class Scene5b1Dialogue : MonoBehaviour
             //gameHandler.AddPlayerStat(1);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! Haha, no. It's just that I mandate everybody plant color coordinated flowers in their yards...";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "Aww, dude...";
         }
         else if (primeInt == 21)
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "...and it'd be such a shame if you couldn't see them all...";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "You really thought I'd be mad?";
 			primeInt = 39;
         }
 
@@ -198,86 +181,31 @@ public class Scene5b1Dialogue : MonoBehaviour
             ArtChar1b.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "What?! They can't get crushed in the street, we don't want <i> controversy.</i>";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "Hey, don't talk about yourself like that, bro!";
 			primeInt = 39;
         }
  
 		//conversation continues from both story choices:
-		else if (primeInt == 40)
+		 else if (primeInt == 39)
         {
-            ArtChar1b.SetActive(false);
             ArtChar1a.SetActive(true);
-            Char1name.text = playerName;
-            Char1speech.text = "...oh... I've been thinking about planting some hydrangeas, I've never had the space for them before.";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-		else if (primeInt == 41)
-        {
-            ArtChar1a.SetActive(false);
-            ArtChar1b.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Hydrangeas?! We only allow red or yellow flowers here!";
-        }
-		else if (primeInt == 42)
-        {
-            Char1name.text = playerName;
-            Char1speech.text = "But hydrangeas are my favorite flower! And it's my house!";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-		else if (primeInt == 43)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "It might be <i> your </i> house and <i> your </i> yard, but there's someone you forgot to ask";
-        }
-		else if (primeInt == 44)
-        {
-            Char1name.text = playerName;
-            Char1speech.text = "The neighbors if they're allergic?";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-		else if (primeInt == 45)
-        {
-            ArtChar1c.SetActive(true);
             ArtChar1b.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "HOA Lady";
-            Char2speech.text = "Ha! As if I care what the neighbors think. No-- Me!";
+            Char2name.text = "Splatthew";
+            Char2speech.text = " Dude, after the party we just had, I could never be mad at you!";
         }
 
-		else if (primeInt == 46)
+         else if (primeInt == 40)
         {
-			ArtChar1c.SetActive(false);
+            
             Char1name.text = "";
-            Char2name.text = "";
-            Char2speech.text = " [<i> The HOA lady gets caught up in cackling to herself and walks off without saying good bye </i>]";
+            Char1speech.text = "";
+            Char2name.text = "Splatthew";
+            Char2speech.text = "You're the best bro ever!";
         }
-
-		else if (primeInt == 47)
-        {
-            Char1name.text = playerName;
-            Char1speech.text = "Surely the neighbors can’t be all bad…";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-
-		else if (primeInt == 48)
-        {
-            Char1name.text = playerName;
-            Char1speech.text = "So what now? Do I unpack and wait for neighbors to say hi, or go out and meet them?";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-
-       else if (primeInt == 49)
+       else if (primeInt == 41)
         {
             DialogueDisplay.SetActive(false);
             Char1name.text = playerName;
@@ -299,7 +227,7 @@ public class Scene5b1Dialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "You WANT kids to run into the street...?!?";
+        Char1speech.text = "Yeah, you guys just looked like you were having so much fun, and I thought I was gonna ruin your night-";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 19;
@@ -311,7 +239,7 @@ public class Scene5b1Dialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Yeah! Run into the street little gremlins, get crushed!";
+        Char1speech.text = "Haha, yeah, I guess it sounds dumb, but-";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;

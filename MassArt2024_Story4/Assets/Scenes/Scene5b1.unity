@@ -225,7 +225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: Kids should!!!
+      value: Haha, I mean...
       objectReference: {fileID: 0}
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_fontStyle
@@ -1461,7 +1461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_text
-      value: Kids should???
+      value: Yeah...
       objectReference: {fileID: 0}
     - target: {fileID: 3845993942996043331, guid: 6dde2cf46b4f34e4fa3413dea87d350b, type: 3}
       propertyPath: m_fontStyle
