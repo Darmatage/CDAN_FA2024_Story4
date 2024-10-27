@@ -25,12 +25,13 @@ public class Scene5a2Dialogue : MonoBehaviour
     public GameObject prop_booklet;
     public GameObject ArtBg1;//bg_library
     public GameObject ArtBg2;//bg_HOAlady_house
+    public GameObject ArtBg3;
     public GameObject Choice1a;
     public GameObject Choice1b;
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    //public AudioSource audioSource1;
+    public AudioSource SFX_Knock;
     private bool allowSpace = true;
     string playerName;
 
@@ -77,24 +78,26 @@ public class Scene5a2Dialogue : MonoBehaviour
         }
         else if (primeInt == 2)
         {
-
+            
+            ArtBg3.SetActive(true);
             DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "That grant sounds like it’d really help my neighbors. But it’d upset the HOA lady and you know...";
+            Char1speech.text = "That grant sounds like it'd really help my neighbors. But it'd upset the HOA lady and you know...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
             Char1name.text = playerName;
-            Char1speech.text = "you should always aim to please people in charge regardless of whether they have your best interests in mind.";
+            Char1speech.text = "...You should always aim to please people in charge regardless of whether they have your best interests in mind.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 4)
         {
-            ArtBg1.SetActive(false);
+            ArtBg3.SetActive(false);
             ArtBg2.SetActive(true);
+            SFX_Knock.Play();
             Char1name.text = "";
             Char1speech.text = "<i><b>knock knock </i></b>";
             Char2name.text = "";
@@ -112,7 +115,7 @@ public class Scene5a2Dialogue : MonoBehaviour
         {
           
             Char1name.text = playerName;
-            Char1speech.text = "Hi, I just thought I’d pop by and tell you something since you always have people’s best interests at heart.";
+            Char1speech.text = "Hi, I just thought I'd pop by and tell you something since you always have people's best interests at heart.";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -129,7 +132,7 @@ public class Scene5a2Dialogue : MonoBehaviour
         {
          
             Char1name.text = playerName;
-            Char1speech.text = "Of course, of course, speaking of higher levels…";
+            Char1speech.text = "Of course, of course, speaking of higher levels...";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -140,7 +143,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Is that stupid teen hanging out on her roof like an aesthetic ruining delinquent again?";
+            Char2speech.text = "Is that stupid teen hanging out on her roof like an aesthetic-ruining delinquent again?";
         }
         else if (primeInt == 10)
         {
@@ -175,7 +178,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Ha! As if she cares, she’s not even around to hear me obliterate her ass.";
+            Char2speech.text = "Ha! As if she cares, she's not even around to hear me obliterate her ass.";
             primeInt = 39;
         }
 
@@ -185,7 +188,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             ArtChar1c.SetActive(false);
             ArtChar1b.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "Views on the teen’s worth as a person aside, it turns out there’s a Hobbyist Astronomy Organization now.";
+            Char1speech.text = "Views on the teen's worth as a person aside, it turns out there's a Hobbyist Astronomy Organization now.";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -195,12 +198,12 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Ugh, the horror. They’re probably trying to convince more people to hang out on their roof.";
+            Char2speech.text = "Ugh, the horror. They're probably trying to convince more people to hang out on their roof.";
         }
         else if (primeInt == 42)
         {
             Char1name.text = playerName;
-            Char1speech.text = "Well, actually, they’re providing free resources for getting home observatories built.";
+            Char1speech.text = "Well, actually, they're providing free resources for getting home observatories built.";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -222,7 +225,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "WHAT?! This cannot be allowed to continue. Who’s in charge there?";
+            Char2speech.text = "WHAT?! This cannot be allowed to continue. Who's in charge there?";
         }
         else if (primeInt == 45)
         {
@@ -239,7 +242,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char2name.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "I know <i>exactly</i> who you’re talking about! I’ll take care of this.";
+            Char2speech.text = "I know <i>exactly</i> who you're talking about! I'll take care of this.";
         }
 
         else if (primeInt == 47)
@@ -257,7 +260,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Hello! I’ve heard you’ve started a new hobbyist group. Dissolve it.";
+            Char2speech.text = "Hello! I've heard you've started a new hobbyist group. Dissolve it.";
         }
         else if (primeInt == 49)
         {
@@ -273,7 +276,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Do I sound like I care? Your granddaughter’s just started first grade, hasn’t she?";
+            Char2speech.text = "Do I sound like I care? Your granddaughter's just started first grade, hasn't she?";
         }
         else if (primeInt == 51)
         {
@@ -289,7 +292,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "If you don’t dissolve it she might herself suddenly unenrolled from the only decent elementary school in the area.";
+            Char2speech.text = "If you don't dissolve it she might herself suddenly unenrolled from the only decent elementary school in the area.";
         }
         else if (primeInt == 53)
         {
@@ -303,7 +306,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "How is that possible, that must be illegal? Pish posh, as if I give a damn about what’s illegal.";
+            Char2speech.text = "How is that possible, that must be illegal? Pish posh, as if I give a damn about what's illegal.";
         }
         else if (primeInt == 55)
         {
@@ -319,7 +322,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = " …excellent. I hope we don’t meet again.";
+            Char2speech.text = " Excellent. I hope we don't meet again.";
         }
         else if (primeInt == 57)
         {
@@ -335,7 +338,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "Very, thank you very much for telling me about that. You’ve been useful.";
+            Char2speech.text = "Very, thank you very much for telling me about that. You've been useful.";
         }
         else if (primeInt == 59)
         {
@@ -356,7 +359,7 @@ public class Scene5a2Dialogue : MonoBehaviour
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
-            NextScene2Button.SetActive(true);
+            
         }
 
 
@@ -367,7 +370,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Yeah, she’s stupid. It’s definitely not that adults inherently view teens as an inferior species.";
+        Char1speech.text = "Yeah, she's stupid. It's definitely not that adults inherently view teens as an inferior species.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 19;
@@ -379,7 +382,7 @@ public class Scene5a2Dialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Hey! She is actually quite smart! Also it’s kind of sad for a full adult to pick on someone who can’t even drive.";
+        Char1speech.text = "Hey! She is actually quite smart! Also it's kind of sad for a full adult to pick on someone who can't even drive.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 29;
@@ -394,7 +397,7 @@ public class Scene5a2Dialogue : MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scene4b");
+        SceneManager.LoadScene("SceneLose");
     }
     public void SceneChange2()
     {

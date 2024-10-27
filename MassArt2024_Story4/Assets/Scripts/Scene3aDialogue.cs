@@ -34,7 +34,7 @@ public class Scene3aDialogue : MonoBehaviour
     public GameObject NextScene2Button;//go find the hoa lady
     public GameObject NextScene3Button;//head to the library
     public GameObject nextButton;
-    //public AudioSource audioSource1;
+    public AudioSource SFX_Knock;
     private bool allowSpace = true;
     string playerName;
 
@@ -97,6 +97,7 @@ public class Scene3aDialogue : MonoBehaviour
         }
         else if (primeInt == 3)
         {
+            SFX_Knock.Play();
             Char1name.text = "";
             Char1speech.text = "<b><i>knock knock </b></i>";
             Char2name.text = "";
@@ -320,7 +321,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
-            Char3speech.text = "<i><b> a large thump can be heard coming from the roof</i></b>";
+            Char3speech.text = "<i><b> A large thump can be heard coming from the roof</i></b>";
         }
         else if (primeInt == 34)
         {
@@ -363,7 +364,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Interesting� anyway that�s probably my daughter WHO ISN�T SUPPOSED TO BE ON THE ROOF!";
+            Char2speech.text = "Interesting... anyway that's probably my daughter, D0TT13... WHO ISN'T SUPPOSED TO BE ON THE ROOF!";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -375,7 +376,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
-            Char3speech.text = "<i>another loud thump can be heard, it's closer than the one before</i>";
+            Char3speech.text = "<i>Another loud thump can be heard, it's closer than the one before</i>";
         }
 
         else if (primeInt == 44)
@@ -386,7 +387,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "It�s not even like you care, mom!";
+            Char3speech.text = "It's not even like you care, mom!";
          
         }
         else if (primeInt == 45)
@@ -395,7 +396,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = " It�s true, I don�t. But the HOA lady does! And she�s relentless";
+            Char2speech.text = " It's true, I don't. But the HOA lady does! And she's relentless";
             Char3name.text = "";
             Char3speech.text = "";
 
@@ -419,7 +420,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "She�s a--";
+            Char3speech.text = "She's a--";
 
         }
         else if (primeInt == 48)
@@ -428,7 +429,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "PERSISTENT WOMAN. She�s a persistent woman.";
+            Char2speech.text = "PERSISTENT WOMAN. She's a persistent woman.";
             Char3name.text = "";
             Char3speech.text = "";
 
@@ -441,14 +442,14 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "You�d think most adults would be over the moon about teens wanting to look at stars instead of like doing drugs, but not her.";
+            Char3speech.text = "You'd think most adults would be over the moon about teens wanting to look at stars instead of like doing drugs, but not her.";
 
         }
         else if (primeInt == 50)
         {
 
             Char1name.text = playerName;
-            Char1speech.text = "She�s banned you from looking at the sky?";
+            Char1speech.text = "She's banned you from looking at the sky?";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -474,7 +475,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "<i>scoff</i> She might as well have.";
+            Char3speech.text = "She might as well have.";
 
         }
         else if (primeInt == 53)
@@ -496,14 +497,14 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "She says it �would ruin the perfect symmetrical beauty of any shots of the neighborhood that might be taken via drone or satellite�.";
+            Char3speech.text = "She says it ''would ruin the perfect symmetrical beauty of any shots of the neighborhood that might be taken via drone or satellite.''";
 
         }
         else if (primeInt == 55)
         {
 
             Char1name.text = playerName;
-            Char1speech.text = "I didn�t know drones and satellites took pictures of the neighborhood";
+            Char1speech.text = "I didn't know drones and satellites took pictures of the neighborhood.";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -518,7 +519,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "D0TT13";
-            Char3speech.text = "They don�t. The woman�s brain rattles around her skull like a comet burning up in the atmosphere.";
+            Char3speech.text = "They don't. The woman's brain rattles around her skull like a comet burning up in the atmosphere.";
 
         }
         else if (primeInt == 57)
@@ -527,7 +528,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "AH! That was rude, go do homework";
+            Char2speech.text = "HEY! That was rude, go do homework";
             Char3name.text = "";
             Char3speech.text = "";
 
@@ -549,7 +550,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "She�s too bright for her own good. It�s what I get for taking her to the\r\nlibrary all the time.";
+            Char2speech.text = "She's too bright for her own good. It's what I get for taking her to the\r\nlibrary all the time.";
             Char3name.text = "";
             Char3speech.text = "";
 
@@ -571,7 +572,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Yeah, the public library! You should go if you haven�t been yet. Everybody\r\nshould have a library card";
+            Char2speech.text = "Yeah, the public library! You should go if you haven't been yet. Everybody\r\nshould have a library card";
             Char3name.text = "";
             Char3speech.text = "";
 
@@ -656,7 +657,7 @@ public class Scene3aDialogue : MonoBehaviour
     public void Choice2aFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Aaaaaah, the sky is falling!";
+        Char1speech.text = "AAAAHHHHH!! The sky is falling!";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -670,7 +671,7 @@ public class Scene3aDialogue : MonoBehaviour
     public void Choice2bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = " � okay then.";
+        Char1speech.text = " ...okay then.";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";

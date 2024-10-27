@@ -154,7 +154,7 @@ public class Scene1Dialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
-            Char2speech.text = "It's riveting literature. What's your name? Let me add you to the neighborhood’s online messaging board.";
+            Char2speech.text = "It's riveting literature.";
         }
         else if (primeInt == 11)
         {
@@ -284,7 +284,7 @@ public class Scene1Dialogue : MonoBehaviour
 		else if (primeInt == 47)
         {
             Char1name.text = playerName;
-            Char1speech.text = "Surely the neighbors can’t be all bad…";
+            Char1speech.text = "Surely the neighbors can't be all bad...";
             Char2name.text = "";
             Char2speech.text = "";
         }

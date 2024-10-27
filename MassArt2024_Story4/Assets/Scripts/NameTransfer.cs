@@ -20,7 +20,7 @@ public class NameTransfer : MonoBehaviour
     public void StoreName()
     {
         theName = inputField.GetComponentInChildren<TMP_Text>().text;
-        textDisplay.GetComponent<TMP_Text>().text = "Welcome, " + theName + ", to the game.";
+        textDisplay.GetComponent<TMP_Text>().text = "Welcome, " + theName + ", to the neighborhood!";
         welcomeDisplay.SetActive(true);
         //gameHandler.UpdateName(theName);
         GameHandler.playerName = theName;

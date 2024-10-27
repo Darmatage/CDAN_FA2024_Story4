@@ -75,7 +75,7 @@ public class Scene4aDialogue : MonoBehaviour
 
             DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "You know it’s a wonder I haven’t been to the library earlier";
+            Char1speech.text = "You know it's a wonder I haven't been to the library earlier";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -95,7 +95,7 @@ public class Scene4aDialogue : MonoBehaviour
             prop_flyer.SetActive(false);
             DialogueDisplay.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "Yo! An incredibly convenient flyer about the thing the neighbor’s kid is into!";
+            Char1speech.text = "Yo! An incredibly convenient flyer about the thing the neighbor's kid is into!";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -113,7 +113,7 @@ public class Scene4aDialogue : MonoBehaviour
         {
 
             Char1name.text = playerName;
-            Char1speech.text = "…yeah, my neighbor’s daughter.";
+            Char1speech.text = "Yeah, my neighbor's daughter.";
             Char2name.text = "";
             Char2speech.text = " ";
 
@@ -124,14 +124,14 @@ public class Scene4aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
-            Char2speech.text = "Oh, that’s fantastic! I’m delighted.";
+            Char2speech.text = "Oh, that's fantastic! I'm delighted.";
 
         }
         else if (primeInt == 8)
         {
 
             Char1name.text = playerName;
-            Char1speech.text = "It’s pretty cool of her. Who are you?";
+            Char1speech.text = "It's pretty cool of her. Who are you?";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -152,7 +152,7 @@ public class Scene4aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Hobbyist";
-            Char2speech.text = " I’m the head of the Hobbyist Astronomy Organization.";
+            Char2speech.text = " I'm the head of the Hobbyist Astronomy Organization.";
 
         }
         else if (primeInt == 11)
@@ -161,7 +161,7 @@ public class Scene4aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Hobbyist";
-            Char2speech.text = "I see you’ve come across our flyer. Are you interested in learning about astronomy?";
+            Char2speech.text = "I see you've come across our flyer. Are you interested in learning about astronomy?";
 
         }
         else if (primeInt == 12)
@@ -196,7 +196,7 @@ public class Scene4aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Hobbyist";
-            Char2speech.text = "Ahh, you’re missing out. I can connect you with the Ground Hobbyist sometime";
+            Char2speech.text = "Ahh, you're missing out. I can connect you with the Ground Hobbyist sometime";
             primeInt = 29;
 
 
@@ -207,7 +207,7 @@ public class Scene4aDialogue : MonoBehaviour
             ArtChar1a.SetActive(false);
             ArtChar1c.SetActive(true);
             Char1name.text = playerName;
-            Char1speech.text = "Regardless of my interest in the group, do you have any resources for my neighbor’s kid?";
+            Char1speech.text = "Regardless of my interest in the group, do you have any resources for my neighbor's kid?";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -237,7 +237,7 @@ public class Scene4aDialogue : MonoBehaviour
             DialogueDisplay.SetActive(true);
             prop_grantbooklet.SetActive(false);
             Char1name.text = playerName;
-            Char1speech.text = "Oh, the HOA doesn’t allow for things being on the roof.";
+            Char1speech.text = "Oh, the HOA doesn't allow for things being on the roof.";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -249,14 +249,14 @@ public class Scene4aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Hobbyist";
-            Char2speech.text = "Not an issue, it’s a national government program, it’s illegal to prevent it.";
+            Char2speech.text = "Not an issue, it's a national government program, it's illegal to block it.";
         }
 
         else if (primeInt == 35)
         {
 
             Char1name.text = playerName;
-            Char1speech.text = "Wow, that’s fantastic news, thank you so much.";
+            Char1speech.text = "Wow, that's fantastic news, thank you so much.";
             Char2name.text = "";
             Char2speech.text = "";
 
@@ -293,7 +293,6 @@ public class Scene4aDialogue : MonoBehaviour
             allowSpace = false;
             NextScene1Button.SetActive(true);
             NextScene2Button.SetActive(true);
-            NextScene3Button.SetActive(true);
         }
 
 
@@ -304,7 +303,7 @@ public class Scene4aDialogue : MonoBehaviour
         public void Choice1aFunct()
         {
             Char1name.text = playerName;
-            Char1speech.text = "I’m always down to know more!";
+            Char1speech.text = "I'm always down to know more!";
             Char2name.text = "";
             Char2speech.text = "";
             primeInt = 15;

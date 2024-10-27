@@ -206,6 +206,16 @@ public class Scene4bDialogue : MonoBehaviour
         }
         else if (primeInt == 32)
         {
+			
+            Char1name.text = "";
+            Char1speech.text = "<i>Later...</i>";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 33)
+        {
         ArtChar3a.SetActive(false);
         ArtChar3b.SetActive(true);
         ArtChar3c.SetActive(false);
@@ -216,7 +226,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "Splatthew";
             Char3speech.text = "Aw man, thanks so much for everything!";
         }
-        else if (primeInt == 33)
+        else if (primeInt == 34)
         {
 			DialogueDisplay.SetActive(true);
             Char1name.text = "";
@@ -233,7 +243,7 @@ public class Scene4bDialogue : MonoBehaviour
         }
 
         // after choice 1a
-        else if (primeInt == 34)
+        else if (primeInt == 35)
         {
             //gameHandler.AddPlayerStat(1);
             Char1name.text = playerName;
@@ -243,7 +253,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 35)
+        else if (primeInt == 36)
         {
             Char1name.text = playerName;
             Char1speech.text = "If you wanna keep living here, we've gotta start wrapping up now.";
@@ -252,7 +262,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 36)
+        else if (primeInt == 37)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -260,7 +270,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char2speech.text = "";
             Char3name.text = "Splatthew";
             Char3speech.text = "But dude, we're having so much fun! We can't stop now! My friends are gonna be so mad if I tell ‘em they need to leave.";
-			primeInt = 39;
+			primeInt = 38;
             NextScene1Button.SetActive(true);
             NextScene2Button.SetActive(true);
         }

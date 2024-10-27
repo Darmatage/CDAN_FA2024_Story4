@@ -31,7 +31,7 @@ public class Scene2aDialogue : MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
-    //public AudioSource audioSource1;
+    public AudioSource SFX_Knock;
     private bool allowSpace = true;
     string playerName;
 
@@ -92,6 +92,7 @@ public class Scene2aDialogue : MonoBehaviour
         }
         else if (primeInt == 4)
         {	
+            SFX_Knock.Play();
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -106,16 +107,25 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Hello, I live next door! I saw the moving truck sitting out front yesterday and was baking some cookies earlier so I figured I�d pop on by.";
+            Char2speech.text = "Hello, I'm 5H3RYL! live next door!";
         }
         else if (primeInt == 6)
         {
+            
+            Char1name.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "5H3RYL";
+            Char2speech.text = "I saw the moving truck sitting out front yesterday and was baking some cookies earlier so I figured I'd pop on by.";
+        }
+        else if (primeInt == 7)
+        {
             Char1name.text = playerName;
-            Char1speech.text = "Oh, wow, you didn�t have to do that, thank you.";
+            Char1speech.text = "Oh, wow, you didn't have to do that, thank you.";
             Char2name.text = "";
             Char2speech.text = " ";
         }
-        else if (primeInt == 7)
+        else if (primeInt == 8)
         {
             ArtChar1a.SetActive(false);
             DialogueDisplay.SetActive(false);
@@ -125,7 +135,7 @@ public class Scene2aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = " ";
         }
-        else if (primeInt == 8)
+        else if (primeInt == 9)
         {
             ArtChar1a.SetActive(true);
             DialogueDisplay.SetActive(true);
@@ -135,7 +145,7 @@ public class Scene2aDialogue : MonoBehaviour
             Char2name.text = "5H3RYL";
             Char2speech.text = "It's no trouble, I remember when I first moved in and didn't know anybody yet so I wanted to be a friendly face.";
         }
-        else if (primeInt == 9)
+        else if (primeInt == 10)
         {
             Char1name.text = playerName;
             Char1speech.text = "Oh?";
@@ -149,7 +159,7 @@ public class Scene2aDialogue : MonoBehaviour
            
         }
         // after choice 1a
-        else if (primeInt == 10)
+        else if (primeInt == 11)
         {
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
@@ -158,33 +168,33 @@ public class Scene2aDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
         }
-        else if (primeInt == 11)
+        else if (primeInt == 12)
         {
             
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "<i>sigh</i> She hasn't even been living here as long as my toddler has and yet she�s dead set on sucking all the personality out of the street.";
+            Char2speech.text = "She hasn't even been living here as long as my toddler has, and yet she's dead set on sucking all the personality out of the street.";
             primeInt = 15;
         }
 
         // after choice 1b
-        else if (primeInt == 12)
+        else if (primeInt == 13)
         {
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
             Char1name.text = playerName;
             Char1speech.text = "";
-            Char2name.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasn�t getting my hopes up about making new friends in the neighborhood.";
+            Char2name.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she wasn't getting my hopes up about making new friends in the neighborhood.";
             Char2speech.text = "";
-            primeInt = 15;
+            
         }
-        else if (primeInt == 13)
+        else if (primeInt == 14)
         {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Everybody else in the neighborhood is very friendly, I promise. It can get a little rambunctious, but it�s great fun.";
+            Char2speech.text = "Everybody else in the neighborhood is very friendly, I promise. It can get a little rambunctious, but it's great fun.";
             primeInt = 15;
         }
 
@@ -229,7 +239,7 @@ public class Scene2aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "5H3RYL";
-            Char2speech.text = "Her pushover of a husband would do anything to make her happy, the poor sap�";
+            Char2speech.text = "Her pushover of a husband would do anything to make her happy, the poor sap...";
         }
         else if (primeInt == 20)
         {
@@ -284,7 +294,7 @@ public class Scene2aDialogue : MonoBehaviour
         Char1speech.text = "The HOA woman was here earlier, she seemed nice. Was she not here when you first moved in?";
         Char2name.text = "";
         Char2speech.text = "";
-        primeInt = 9;
+        primeInt = 11;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         nextButton.SetActive(true);
@@ -293,10 +303,10 @@ public class Scene2aDialogue : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = playerName;
-        Char1speech.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she really wasn�t getting my hopes up about making new friends in the neighborhood.";
+        Char1speech.text = "Ugh, I am so glad. An awful HOA woman was here earlier and she wasn't getting my hopes up about living in the neighborhood.";
         Char2name.text = "";
         Char2speech.text = "";
-        primeInt = 12;
+        primeInt = 13;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         nextButton.SetActive(true);

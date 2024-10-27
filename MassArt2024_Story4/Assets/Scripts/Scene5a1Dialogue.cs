@@ -32,6 +32,7 @@ public class Scene5a1Dialogue:MonoBehaviour
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
+    public AudioSource SFX_Knock;
     private bool allowSpace = true;
     string playerName;
 
@@ -80,8 +81,9 @@ public class Scene5a1Dialogue:MonoBehaviour
         else if (primeInt == 2)
         {   
             DialogueDisplay.SetActive(true);
-            Char1name.text = playerName;
-            Char1speech.text = "<i> knock knock <i>";
+            SFX_Knock.Play();
+            Char1name.text = "";
+            Char1speech.text = "<i> knock knock </i>";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -95,7 +97,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "Oh, it's you, New Neighbor!";
             //gameHandler.AddPlayerStat(1);
         }
@@ -114,7 +116,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "MOM, THE NEW NEIGHBOR IS HERE!";
         }
         else if (primeInt == 6)
@@ -146,7 +148,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "Yeah!";
         }
         else if (primeInt == 9)
@@ -164,7 +166,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "Aw, swell, sounds like a blast.";
         }
 		else if (primeInt == 11)
@@ -194,7 +196,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "Sweet!";
         }
         else if (primeInt == 14)
@@ -204,7 +206,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text ="5H3RYL";
-            Char2speech.text = "What about the HOA though?";
+            Char2speech.text = "What about the HOA, though?";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -275,7 +277,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "5H3RYL's Daughter";
+            Char3name.text = "D0TT13";
             Char3speech.text = "Is it unobtrusive looking?";
         }
         else if (primeInt == 42)
@@ -299,7 +301,7 @@ public class Scene5a1Dialogue:MonoBehaviour
             Char3speech.text = "";
 			primeInt = 39;
             NextScene1Button.SetActive(true);
-            NextScene2Button.SetActive(true);
+            
         }
 
         //Please do NOT delete this final bracket that ends the Next() function:
@@ -339,7 +341,7 @@ public class Scene5a1Dialogue:MonoBehaviour
 
     public void SceneChange1()
     {
-        SceneManager.LoadScene("Scenec1");
+        SceneManager.LoadScene("SceneWin");
     }
     public void SceneChange2()
     {
