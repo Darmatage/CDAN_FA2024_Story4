@@ -10,7 +10,7 @@ public class GameHandler : MonoBehaviour {
 
         public static int HOAcomplaints = 0;
 		public TMP_Text complaintsText;
-		private GameObject complaintsBG; 
+		public GameObject complaintsBG; 
         public static string playerName = "YOU";
 
         public static bool GameisPaused = false;
@@ -31,11 +31,12 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
-				DisplayStats();
-
+				
+				// Stat display:
 				if (GameObject.FindWithTag("Complaints") != null){
 					complaintsBG = GameObject.FindWithTag("Complaints");
 				}
+				DisplayStats();
         }
 
         void Update(){
@@ -56,7 +57,7 @@ public class GameHandler : MonoBehaviour {
 			
 			if (HOAcomplaints <= 0){
 				complaintsBG.SetActive(false);
-				} 
+			} 
 			else {
 				complaintsBG.SetActive(true);
 			}
@@ -114,5 +115,5 @@ public class GameHandler : MonoBehaviour {
     {
         return playerName;
     }
-
+	
 }
