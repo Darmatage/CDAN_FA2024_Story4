@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 389279048}
   m_Layer: 5
   m_Name: Text_Placeholder
-  m_TagString: Untagged
+  m_TagString: Complaints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 400}
+  m_AnchoredPosition: {x: 0, y: 572}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389279048
@@ -1282,19 +1282,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213903644437465690, guid: 0da76c3340588eb43992a0de40a1c6ba, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 645.6461
+      value: 1026.625
       objectReference: {fileID: 0}
     - target: {fileID: 6213903644437465690, guid: 0da76c3340588eb43992a0de40a1c6ba, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 52.102
+      value: 58.86
       objectReference: {fileID: 0}
     - target: {fileID: 6213903644437465690, guid: 0da76c3340588eb43992a0de40a1c6ba, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 289.17694
+      value: 98.687
       objectReference: {fileID: 0}
     - target: {fileID: 6213903644437465690, guid: 0da76c3340588eb43992a0de40a1c6ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 311.80997
+      value: 308.43
       objectReference: {fileID: 0}
     - target: {fileID: 7398763183430221475, guid: 0da76c3340588eb43992a0de40a1c6ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -10,7 +10,8 @@ public class GameHandler : MonoBehaviour {
 
         public static int HOAcomplaints = 0;
 		public TMP_Text complaintsText;
-        public static string playerName = "FRED";
+		private GameObject complaintsBG; 
+        public static string playerName = "YOU";
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
@@ -31,6 +32,10 @@ public class GameHandler : MonoBehaviour {
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
 				DisplayStats();
+
+				if (GameObject.FindWithTag("Complaints") != null){
+					complaintsBG = GameObject.FindWithTag("Complaints");
+				}
         }
 
         void Update(){
@@ -43,13 +48,22 @@ public class GameHandler : MonoBehaviour {
                 //       Debug.Log("Player Stat = " + playerStat1);
                 //}
 
-				if (HOAcomplaints == 5){
-					SceneManager.LoadScene("SceneLose_Complaints");
-				}
+				
         }
 
 		public void DisplayStats(){
 			complaintsText.text = "COMPLAINTS: " + HOAcomplaints;
+			
+			if (HOAcomplaints <= 0){
+				complaintsBG.SetActive(false);
+				} 
+			else {
+				complaintsBG.SetActive(true);
+			}
+
+			if (HOAcomplaints >= 5){
+				SceneManager.LoadScene("SceneLose_Complaints");
+			}
 		}
 
         public void Pause(){

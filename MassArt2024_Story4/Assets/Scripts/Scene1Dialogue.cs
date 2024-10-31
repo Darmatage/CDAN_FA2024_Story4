@@ -196,7 +196,6 @@ public class Scene1Dialogue : MonoBehaviour
         // after choice 1a
         else if (primeInt == 20)
         {
-            //gameHandler.AddPlayerStat(1);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA Lady";
@@ -214,8 +213,11 @@ public class Scene1Dialogue : MonoBehaviour
         // after choice 1b
         else if (primeInt == 30)
         {
+			//Update the complaint stat:
 			GameHandler.HOAcomplaints +=1;
+			Debug.Log("HOA Complaints updated to " + GameHandler.HOAcomplaints);
 			GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().DisplayStats();
+
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
             Char1name.text = "";
