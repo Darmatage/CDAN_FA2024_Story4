@@ -240,7 +240,7 @@ public class Scene5a2Dialogue : MonoBehaviour
         {
     
             Char1name.text = "";
-            Char2name.text = "";
+            Char1speech.text = "";
             Char2name.text = "HOA Lady";
             Char2speech.text = "I know <i>exactly</i> who you're talking about! I'll take care of this.";
         }
