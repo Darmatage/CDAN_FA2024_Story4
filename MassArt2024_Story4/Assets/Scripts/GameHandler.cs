@@ -8,7 +8,8 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-        public static int playerStat1;
+        public static int HOAcomplaints = 0;
+		public TMP_Text complaintsText;
         public static string playerName = "FRED";
 
         public static bool GameisPaused = false;
@@ -29,6 +30,7 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
+				DisplayStats();
         }
 
         void Update(){
@@ -40,9 +42,17 @@ public class GameHandler : MonoBehaviour {
                 //if (Input.GetKey("p")){
                 //       Debug.Log("Player Stat = " + playerStat1);
                 //}
+
+				if (HOAcomplaints == 5){
+					SceneManager.LoadScene("SceneLose_Complaints");
+				}
         }
 
-        void Pause(){
+		public void DisplayStats(){
+			complaintsText.text = "COMPLAINTS: " + HOAcomplaints;
+		}
+
+        public void Pause(){
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
                 GameisPaused = true;

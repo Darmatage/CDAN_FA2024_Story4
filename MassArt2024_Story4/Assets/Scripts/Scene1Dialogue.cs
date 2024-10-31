@@ -214,6 +214,8 @@ public class Scene1Dialogue : MonoBehaviour
         // after choice 1b
         else if (primeInt == 30)
         {
+			GameHandler.HOAcomplaints +=1;
+			GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().DisplayStats();
             ArtChar1a.SetActive(false);
             ArtChar1b.SetActive(true);
             Char1name.text = "";
