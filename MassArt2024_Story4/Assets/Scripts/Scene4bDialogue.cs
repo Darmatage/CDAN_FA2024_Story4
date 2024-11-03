@@ -185,11 +185,23 @@ public class Scene4bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "HOA lady";
-            Char2speech.text = " ...Huh. Okay. I'll get it right away.";
+            Char2speech.text = "I wasn't aware they could do that... wait... do you even have an iguana? Ugh. Whatever. I'll get it right away.";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 31)
+        {
+            GameHandler.HOAcomplaints +=1;
+			Debug.Log("HOA Complaints updated to " + GameHandler.HOAcomplaints);
+			GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().DisplayStats();
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 32)
         {
         ArtChar2a.SetActive(false);
         ArtChar2b.SetActive(false);
@@ -204,7 +216,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 32)
+        else if (primeInt == 33)
         {
 			
             Char1name.text = "";
@@ -214,7 +226,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 33)
+        else if (primeInt == 34)
         {
         ArtChar3a.SetActive(false);
         ArtChar3b.SetActive(true);
@@ -226,7 +238,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "Splatthew";
             Char3speech.text = "Aw man, thanks so much for everything!";
         }
-        else if (primeInt == 34)
+        else if (primeInt == 35)
         {
 			DialogueDisplay.SetActive(true);
             Char1name.text = "";
@@ -243,7 +255,7 @@ public class Scene4bDialogue : MonoBehaviour
         }
 
         // after choice 1a
-        else if (primeInt == 35)
+        else if (primeInt == 36)
         {
             //gameHandler.AddPlayerStat(1);
             Char1name.text = playerName;
@@ -253,7 +265,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 36)
+        else if (primeInt == 37)
         {
             Char1name.text = playerName;
             Char1speech.text = "If you wanna keep living here, we've gotta start wrapping up now.";
@@ -262,7 +274,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
         }
-        else if (primeInt == 37)
+        else if (primeInt == 38)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -270,7 +282,7 @@ public class Scene4bDialogue : MonoBehaviour
             Char2speech.text = "";
             Char3name.text = "Splatthew";
             Char3speech.text = "But dude, we're having so much fun! We can't stop now! My friends are gonna be so mad if I tell ‘em they need to leave.";
-			primeInt = 38;
+			primeInt = 39;
             NextScene1Button.SetActive(true);
             NextScene2Button.SetActive(true);
         }

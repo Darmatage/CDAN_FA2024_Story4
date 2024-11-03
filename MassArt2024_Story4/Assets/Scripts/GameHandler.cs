@@ -62,7 +62,7 @@ public class GameHandler : MonoBehaviour {
 				complaintsBG.SetActive(true);
 			}
 
-			if (HOAcomplaints >= 5){
+			if (HOAcomplaints >= 2){
 				SceneManager.LoadScene("SceneLose_Complaints");
 			}
 		}
